@@ -16,8 +16,6 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .header-inner {
@@ -497,7 +495,6 @@ body {
   color: #fff;
 }
 
-
 .badge-floating {
   position: absolute;
   top: 40px;
@@ -509,8 +506,7 @@ body {
   width: 60px;
 }
 
-
-.custom-container {
+.itp-stats {
   width: 100vw;
   position: relative;
   left: 50%;
@@ -522,19 +518,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 29px 0 35px 0;
+  padding: 29px 28px 35px 28px;
+  box-sizing: border-box;
 }
 
-.itp-stats {
+.stats {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1440px;
+  box-sizing: border-box;
 }
 
-.custom-item {
+.stats-item {
   width: 276px;
   height: 63px;
   display: flex;
@@ -561,77 +559,111 @@ body {
   color: #4f4f4f;
 }
 
-.itp-section {
-  height: 711.39px;
-  padding-left: 28.8px;
-  padding-right: 28.8px;
+.itp-benefits {
   background-color: #fff;
+  padding-right: 28.8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.itp-section-title {
-  height: 135.39px;
+.itp-benefits__header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  margin-bottom: 20px;
 }
 
-.section-heading {
-  font-weight: 600;
-  font-size: 26px;
-  color: #000;
-  margin: 0 0 8px 0;
-  text-align: left;
-}
-
-.section-subheading {
+.itp-benefits__title {
   font-weight: 400;
-  font-size: 16px;
-  color: #4f4f4f;
-  text-align: left;
+  font-size: 20px;
+  color: #4F4F4F;
+  margin: 0 0 8px 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.itp-section-content {
-  height: 576px;
-  padding: 0px;
-  margin-top: 20px;
+.itp-benefits__subtitle {
+  font-weight: 600;
+  font-size: 38px;
+  color: #000;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.itp-card {
+.itp-benefits__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.itp-benefits__list {
+  margin: 0;
+  padding: 0;
+}
+
+.itp-benefits__item {
+  display: flex;
+  justify-content: center;
+}
+
+.itp-benefits__card {
   background-color: #fff;
   border: none;
-  height: 255px;
-  width: 230.38px;
+  width: 230px;
+  height: 231px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
   text-align: left;
 }
 
-.itp-card-img {
+.itp-benefits__icon {
   width: 35px;
   height: 40px;
   object-fit: contain;
 }
 
-.itp-card h4 {
+.itp-benefits__card-title {
   font-weight: 600;
   font-size: 16px;
   color: #000;
-  margin: 0 0 8px 0;
-  text-align: left;
+  margin: 8px 0;
 }
 
-.itp-card p {
+.itp-benefits__card-text {
   font-weight: 400;
   font-size: 14px;
   color: #4f4f4f;
   margin: 0;
   line-height: 1.4;
-  text-align: left;
 }
 
-.itp-app-img {
+.itp-benefits__app {
+  flex-shrink: 0;
+}
+
+.buy-save-btn {
+  height: 41px;
+  width: 160px;
+  background-color: #F0034E;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.buy-save-btn:hover {
+  color: #F0034E;
+  background-color: #fff;
+  border: 1px solid #F0034E;
+}
+
+
+.itp-benefits__app-img {
   width: 460.75px;
   height: auto;
   object-fit: contain;
@@ -894,7 +926,6 @@ body {
 
 .testimonial-card {
   flex: 0 0 254px;
-  /* sabit genişlik */
   width: 254px;
   height: 325px;
   background-color: #fff;
@@ -1271,7 +1302,7 @@ body {
 
 .itp-subscribe-section {
   width: 100vw;
-  height: 193px;
+  height: 225px;
   position: relative;
   left: 50%;
   right: 50%;
@@ -1514,27 +1545,27 @@ body {
 }
 
 .footer-col:nth-child(1) {
-  width: 249px;
+  width: 315px;
   height: 323px;
 }
 
 .footer-col:nth-child(2) {
-  width: 206px;
+  width: 204px;
   height: 277px;
 }
 
 .footer-col:nth-child(3) {
-  width: 211px;
+  width: 204px;
   height: 277px;
 }
 
 .footer-col:nth-child(4) {
-  width: 157px;
+  width: 203px;
   height: 149px;
 }
 
 .footer-col:nth-child(5) {
-  width: 313px;
+  width: 315px;
   height: 242px;
   gap: 30px;
 }
