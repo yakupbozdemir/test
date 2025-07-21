@@ -366,7 +366,6 @@ body {
 .card-slider {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
   scroll-behavior: smooth;
   padding: 0 15px 20px;
   max-width: 1440px;
@@ -379,7 +378,8 @@ body {
 
 .card {
   flex: 0 0 254px;
-  width: 254px;
+  width: 260px;
+  margin-right: 28px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -492,6 +492,51 @@ body {
 
 .badge-floating img {
   width: 60px;
+}
+
+.nav-slider {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.nav-slider button {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  pointer-events: auto;
+}
+
+.nav-slider button.nav-prev {
+  position: relative;
+  left: 50px;
+  pointer-events: auto;
+}
+
+.nav-slider button.nav-next {
+  position: relative;
+  right: 75px;
+  pointer-events: auto;
+}
+
+.nav-slider img {
+  width: 50px;
+  height: 50px;
 }
 
 .itp-stats {
@@ -949,16 +994,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.9) url('play-icons.svg') no-repeat center center;
+  width: 80px;
+  height: 80px;
   background-size: 20px;
   border-radius: 50%;
-  transition: transform 0.2s ease;
-}
-
-.play-button:hover {
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .caption {
@@ -991,11 +1030,60 @@ body {
   text-align: center;
 }
 
-
-
 .btn-watch-all:hover {
   background-color: #d10244;
   color: #fff;
+}
+
+.review-nav-slider {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0 12px;
+  pointer-events: none;
+}
+
+.review-nav-slider button {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.review-nav-slider button:hover {
+  background-color: #F0034E;
+  transform: scale(1.05);
+}
+
+.review-nav-slider button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.review-nav-slider img {
+  width: 50px;
+  height: 50px;
+}
+
+.review-nav-slider .review-prev {
+  margin-left: 105px;
+}
+
+.review-nav-slider .review-next {
+  margin-right: 75px;
 }
 
 
@@ -1301,7 +1389,7 @@ body {
   margin-right: -50vw;
   background-color: #F0034E;
   color: #ffffff;
-  padding: 50px 28px;
+  padding: 50px 116px;
   font-family: 'Poppins', sans-serif;
 }
 
