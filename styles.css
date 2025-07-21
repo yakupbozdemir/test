@@ -128,7 +128,6 @@ body {
   color: #F0034E;
 }
 
-
 .itp-banner-bar {
   width: 100vw;
   position: relative;
@@ -184,8 +183,10 @@ body {
 }
 
 .hero-left {
-  max-width: 500px;
+  width: 442px;
+  height: 379px;
   flex: 0 0 auto;
+  padding-left: 30px;
 }
 
 .hero-left .tagline {
@@ -243,7 +244,9 @@ body {
   height: 450px;
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-left: 180px;
 }
+
 .diamond {
   position: absolute;
   width: 150px;
@@ -331,7 +334,8 @@ body {
   text-align: left;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-left: 0px;
+  padding-right: 15px;
 }
 
 .slider-header p {
@@ -556,6 +560,7 @@ body {
   justify-content: center;
   text-align: left;
   margin-bottom: 20px;
+  padding-left: 0px;
 }
 
 .itp-benefits__title {
@@ -577,6 +582,7 @@ body {
 .itp-benefits__content {
   display: flex;
   align-items: flex-start;
+  padding-left: 0px;
 }
 
 .itp-benefits__list {
@@ -996,7 +1002,7 @@ body {
 .itp-about-section {
   height: 372px;
   background-color: #fff;
-  padding: 0 28px 50px 28px;
+  padding: 0 28px 50px 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -1080,7 +1086,8 @@ body {
 .itp-help-section>.container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding-right: 28.8px;
+  padding-left: 0px;
 }
 
 .itp-help-header {
@@ -1143,7 +1150,7 @@ body {
 
 .itp-attractions-section {
   height: 707px;
-  padding: 60px 28.8px;
+  padding: 60px 28.8px 60px 0px;
   background-color: #fff;
 }
 
