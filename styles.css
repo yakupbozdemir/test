@@ -238,7 +238,6 @@ body {
   height: 100%;
 }
 
-
 .hero-img {
   width: 890px;
   height: 450px;
@@ -315,52 +314,34 @@ body {
 .itp-slider {
   position: relative;
   width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 50px 0;
+  margin-left: calc(-50vw + 50%);
+  padding: 50px 15px;
   background: #f8f9fa;
-  font-family: 'Poppins', sans-serif;
-}
-
-.itp-slider>.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
+  overflow: hidden;
 }
 
 .slider-header {
   text-align: left;
+  padding: 0 15px 30px;
   max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 0px;
-  padding-right: 15px;
+  margin: 0 auto 30px auto;
 }
 
 .slider-header p {
   font-size: 16px;
-  color: #F0034E;
+  color: #f0034e;
   font-weight: 500;
-  margin-bottom: 6px;
 }
 
 .slider-header h2 {
   font-size: 24px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
-.badge-floating {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 5;
-}
-
-.badge-floating img {
-  width: 60px;
+input[type="radio"] {
+  display: none;
 }
 
 .card-slider {
@@ -370,49 +351,76 @@ body {
   padding: 0 15px 20px;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.card-slider::-webkit-scrollbar {
-  display: none;
+  box-sizing: border-box;
+  gap: 28px;
 }
 
 .card {
-  flex: 0 0 254px;
-  width: 260px;
-  margin-right: 28px;
-  background: transparent;
+  flex: 0 0 244px;
+  max-width: 244px;
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 0 0 244px;
   border: none;
   box-shadow: none;
   overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #f8f9fa;
+  user-select: none;
+  display: flex;
+  justify-content: center; 
+  text-align: left;
+  flex-direction: column;
+}
+
+.hover-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 244px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .card-image {
   position: relative;
-  width: 254px;
+  width: 244px;
   height: 370px;
   overflow: hidden;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .card-image img {
-  width: 254px;
+  width: 244px;
   height: 370px;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
-.card-badge {
+.card-image img+img {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 60px;
-  height: auto;
-  z-index: 2;
+  top: 280px;
+  right: 12px;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .card-body {
-  padding: 12px 0;
+  padding: 12px 0px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .category {
@@ -429,6 +437,7 @@ body {
   color: #111;
   margin-bottom: 10px;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
 .prices {
@@ -451,94 +460,92 @@ body {
 
 .new-price {
   font-size: 14px;
-  color: #F0034E;
+  color: #f0034e;
   font-weight: 600;
 }
 
 .new-price span {
   font-weight: 500;
-  color: #F0034E;
+  color: #f0034e;
   margin-left: 4px;
 }
 
-.view-all {
-  margin-top: 30px;
-  text-align: center;
+#slide1:checked~.card-slider {
+  transform: translateX(0);
 }
 
-.btn-view-all {
-  background-color: #F0034E;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  margin: 0 auto;
+#slide2:checked~.card-slider {
+  transform: translateX(calc(-282px * 1));
 }
 
-.btn-view-all:hover {
-  background-color: #d10244;
-  color: #fff;
+#slide3:checked~.card-slider {
+  transform: translateX(calc(-282px * 2));
 }
 
-.badge-floating {
+#slide4:checked~.card-slider {
+  transform: translateX(calc(-282px * 3));
+}
+
+#slide5:checked~.card-slider {
+  transform: translateX(calc(-282px * 4));
+}
+
+/* İleri geri butonlar genel stil */
+.nav-btn {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 5;
-}
-
-.badge-floating img {
-  width: 60px;
-}
-
-.nav-slider {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  width: 100%;
-  max-width: 1500px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  pointer-events: none;
-}
-
-
-.nav-slider button {
+  top: 50%;
+  transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 50%;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  color: #000;
+  font-weight: 700;
+}
+
+.nav-btn:hover {
+  background-color: #f0034e;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sol butonlar */
+.nav-prev {
+  left: 15px;
+}
+
+/* Sağ butonlar */
+.nav-next {
+  right: 15px;
+}
+
+/* Aktif slide göre görünür butonlar */
+#slide2:checked~#prev2,
+#slide3:checked~#prev3,
+#slide4:checked~#prev4,
+#slide5:checked~#prev5 {
+  opacity: 1;
   pointer-events: auto;
 }
 
-.nav-slider button.nav-prev {
-  position: relative;
-  left: 35px;
+#slide1:checked~#next1,
+#slide2:checked~#next2,
+#slide3:checked~#next3,
+#slide4:checked~#next4 {
+  opacity: 1;
   pointer-events: auto;
-}
-
-.nav-slider button.nav-next {
-  position: relative;
-  right: 63px;
-  pointer-events: auto;
-}
-
-.nav-slider img {
-  width: 50px;
-  height: 50px;
 }
 
 .itp-stats {
