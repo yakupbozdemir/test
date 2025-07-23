@@ -496,17 +496,19 @@ body {
 
 .nav-slider {
   position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
+  width: 100%;
+  max-width: 1500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: translateY(-50%);
   padding: 0 10px;
   pointer-events: none;
 }
+
 
 .nav-slider button {
   width: 50px;
@@ -524,13 +526,13 @@ body {
 
 .nav-slider button.nav-prev {
   position: relative;
-  left: 50px;
+  left: 35px;
   pointer-events: auto;
 }
 
 .nav-slider button.nav-next {
   position: relative;
-  right: 75px;
+  right: 63px;
   pointer-events: auto;
 }
 
@@ -696,7 +698,6 @@ body {
   background-color: #fff;
   border: 1px solid #F0034E;
 }
-
 
 .itp-benefits__app-img {
   width: 460.75px;
@@ -871,37 +872,47 @@ body {
   text-decoration: underline;
 }
 
+
 .itp-review-section {
   width: 100vw;
   position: relative;
   left: 50%;
-  right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;
   height: 732px;
   padding: 60px 0;
   background-color: #F8F8F8;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1440px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
 }
 
-.review-title img {
+.text-start.mb-4 p {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.text-start.mb-4 h2 {
+  margin: 5px 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+}
+
+.text-start.mb-4 h2 img {
   height: 32px;
   vertical-align: text-bottom;
+  margin: 0 8px;
 }
 
 .review-tabs-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: block;
-  border-bottom: none;
   padding: 0 15px;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 .review-tabs {
@@ -914,74 +925,84 @@ body {
   cursor: pointer;
   color: #6c757d;
   font-weight: 500;
-  position: relative;
   border-bottom: 3px solid transparent;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .review-tab-btn:hover {
   color: #000;
 }
 
-#tab-videos:checked~.review-tabs label[for="tab-videos"],
-#tab-text-reviews:checked~.review-tabs label[for="tab-text-reviews"] {
+.review-tabs-wrapper input#tab-videos:checked~.review-tabs label[for="tab-videos"],
+.review-tabs-wrapper input#tab-text-reviews:checked~.review-tabs label[for="tab-text-reviews"] {
   color: #000;
   border-bottom-color: #F0034E;
 }
 
-.rating-text strong {
-  color: #000;
+.rating-text {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin: 20px 0 10px;
 }
 
-.review-panel {
+.rating-text .rating-value,
+.rating-text .rating-count {
+  color: #F0034E;
+  font-weight: 600;
+}
+
+.review-content .review-panel {
   display: none;
 }
 
-#tab-videos:checked~.review-tabs~.review-content #panel-videos {
+.review-tabs-wrapper input#tab-videos:checked~.review-content #panel-videos {
   display: block;
 }
 
-#tab-text-reviews:checked~.review-tabs~.review-content #panel-text-reviews {
+.review-tabs-wrapper input#tab-text-reviews:checked~.review-content #panel-text-reviews {
   display: block;
 }
 
-.testimonial-slider-container {
+.slider-wrapper {
+  position: relative;
+  width: 1350px;
+  height: 325px;
+  margin: 0 auto 50px;
+}
+
+.slider-outer {
+  width: 1350px;
+  overflow: hidden;
+  margin: 0 auto 50px;
+  position: relative;
+}
+
+.slides {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-left: 28.8px;
-  padding-right: 28.8px;
-  margin-bottom: 50px;
-  scrollbar-width: none;
-}
-
-.testimonial-slider-container::-webkit-scrollbar {
-  display: none;
+  transition: transform 0.5s ease;
 }
 
 .testimonial-card {
-  flex: 0 0 254px;
   width: 254px;
+  flex-shrink: 0;
+  margin-right: 20px;
   height: 325px;
-  background-color: #fff;
+  background: #fff;
   border: 1px solid #e9ecef;
   border-radius: 12px;
   padding: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .video-thumbnail {
   position: relative;
   width: 100%;
   height: 245px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-thumbnail img {
@@ -996,7 +1017,6 @@ body {
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  background-size: 20px;
   border-radius: 50%;
 }
 
@@ -1004,7 +1024,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 5px 5px 5px;
+  padding: 12px 5px 5px;
 }
 
 .caption p {
@@ -1018,74 +1038,149 @@ body {
   opacity: 0.5;
 }
 
-.btn-watch-all {
+/* === SLIDER POZİSYONLARI === */
+#itp-r1:checked~.slides {
+  transform: translateX(0);
+}
 
+#itp-r2:checked~.slides {
+  transform: translateX(-274px);
+}
+
+#itp-r3:checked~.slides {
+  transform: translateX(-548px);
+}
+
+#itp-r4:checked~.slides {
+  transform: translateX(-822px);
+}
+
+#itp-r5:checked~.slides {
+  transform: translateX(-1096px);
+}
+
+#itp-r6:checked~.slides {
+  transform: translateX(-1370px);
+}
+
+#itp-r7:checked~.slides {
+  transform: translateX(-1644px);
+}
+
+#itp-r8:checked~.slides {
+  transform: translateX(-1918px);
+}
+
+#itp-r9:checked~.slides {
+  transform: translateX(-2192px);
+}
+
+#itp-r10:checked~.slides {
+  transform: translateX(-2466px);
+}
+
+#itp-r11:checked~.slides {
+  transform: translateX(-2740px);
+}
+
+#itp-r12:checked~.slides {
+  transform: translateX(-3014px);
+}
+
+/* === OK BUTONLARI === */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.nav-prev {
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  background-image: url('img/arrow-left-big.svg');
+}
+
+.nav-next {
+  width: 50px;
+  height: 50px;
+  right: 0px;
+  background-image: url('img/arrow-right-big.svg');
+}
+
+/* İleri Butonları (şarta göre görünür) */
+#itp-r1:checked~.nav-next[for="itp-r2"],
+#itp-r2:checked~.nav-next[for="itp-r3"],
+#itp-r3:checked~.nav-next[for="itp-r4"],
+#itp-r4:checked~.nav-next[for="itp-r5"],
+#itp-r5:checked~.nav-next[for="itp-r6"],
+#itp-r6:checked~.nav-next[for="itp-r7"],
+#itp-r7:checked~.nav-next[for="itp-r8"],
+#itp-r8:checked~.nav-next[for="itp-r9"],
+#itp-r9:checked~.nav-next[for="itp-r10"],
+#itp-r10:checked~.nav-next[for="itp-r11"],
+#itp-r11:checked~.nav-next[for="itp-r12"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Geri Butonları (şarta göre görünür) */
+#itp-r2:checked~.nav-prev[for="itp-r1"],
+#itp-r3:checked~.nav-prev[for="itp-r2"],
+#itp-r4:checked~.nav-prev[for="itp-r3"],
+#itp-r5:checked~.nav-prev[for="itp-r4"],
+#itp-r6:checked~.nav-prev[for="itp-r5"],
+#itp-r7:checked~.nav-prev[for="itp-r6"],
+#itp-r8:checked~.nav-prev[for="itp-r7"],
+#itp-r9:checked~.nav-prev[for="itp-r8"],
+#itp-r10:checked~.nav-prev[for="itp-r9"],
+#itp-r11:checked~.nav-prev[for="itp-r10"],
+#itp-r12:checked~.nav-prev[for="itp-r11"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === BUTONLAR === */
+.btn-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-actions .btn-watch-all,
+.btn-actions .btn-read-all {
+  display: none;
   margin: 0 auto;
-  background-color: #F0034E;
+  background: #F0034E;
   color: #fff;
   font-weight: 600;
   padding: 12px 30px;
   border-radius: 8px;
-  transition: background-color 0.3s;
-  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-.btn-watch-all:hover {
-  background-color: #d10244;
-  color: #fff;
+.btn-actions .btn-watch-all:hover,
+.btn-actions .btn-read-all:hover {
+  background: #d10244;
 }
 
-.review-nav-slider {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateY(-50%);
-  padding: 0 12px;
-  pointer-events: none;
+.review-tabs-wrapper input#tab-videos:checked~.btn-actions .btn-watch-all {
+  display: inline-block;
 }
 
-.review-nav-slider button {
-  width: 50px;
-  height: 50px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  pointer-events: auto;
-  cursor: pointer;
+.review-tabs-wrapper input#tab-text-reviews:checked~.btn-actions .btn-read-all {
+  display: inline-block;
 }
-
-.review-nav-slider button:hover {
-  background-color: #F0034E;
-  transform: scale(1.05);
-}
-
-.review-nav-slider button:hover img {
-  filter: brightness(0) invert(1);
-}
-
-.review-nav-slider img {
-  width: 50px;
-  height: 50px;
-}
-
-.review-nav-slider .review-prev {
-  margin-left: 105px;
-}
-
-.review-nav-slider .review-next {
-  margin-right: 75px;
-}
-
 
 .itp-about-section {
   height: 372px;
