@@ -377,15 +377,11 @@ input[type="radio"] {
 }
 
 .hover-video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 244px;
   height: 370px;
   object-fit: cover;
-  border-radius: 12px;
-  opacity: 0;
-  pointer-events: none;
+  display: block;
+  border-radius: 12px 12px 0 0;
 }
 
 .card-image {
@@ -398,14 +394,6 @@ input[type="radio"] {
 }
 
 .card-image img {
-  width: 244px;
-  height: 370px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px 12px 0 0;
-}
-
-.card-image img+img {
   position: absolute;
   top: 280px;
   right: 12px;
@@ -449,7 +437,6 @@ input[type="radio"] {
 .old-price {
   font-size: 13px;
   color: #999;
-  text-decoration: line-through;
 }
 
 .old-price span {
@@ -469,81 +456,96 @@ input[type="radio"] {
   color: #f0034e;
   margin-left: 4px;
 }
-
-#slide1:checked~.card-slider {
+#slide1:checked~.slides {
   transform: translateX(0);
 }
 
-#slide2:checked~.card-slider {
-  transform: translateX(calc(-282px * 1));
+#slide2:checked~.slides {
+  transform: translateX(-274px);
 }
 
-#slide3:checked~.card-slider {
-  transform: translateX(calc(-282px * 2));
+#slide3:checked~.slides {
+  transform: translateX(-548px);
 }
 
-#slide4:checked~.card-slider {
-  transform: translateX(calc(-282px * 3));
+#slide4:checked~.slides {
+  transform: translateX(-822px);
 }
 
-#slide5:checked~.card-slider {
-  transform: translateX(calc(-282px * 4));
+#slide5:checked~.slides {
+  transform: translateX(-1096px);
 }
 
-/* İleri geri butonlar genel stil */
+#slide6:checked~.slides {
+  transform: translateX(-1370px);
+}
+
+#slide7:checked~.slides {
+  transform: translateX(-1644px);
+}
+
+#slide8:checked~.slides {
+  transform: translateX(-1918px);
+}
+
+#slide9:checked~.slides {
+  transform: translateX(-2192px);
+}
+
+#slide10:checked~.slides {
+  transform: translateX(-2466px);
+}
+
 .nav-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-size: 28px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  user-select: none;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-  color: #000;
-  font-weight: 700;
 }
 
-.nav-btn:hover {
-  background-color: #f0034e;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Sol butonlar */
 .nav-prev {
-  left: 15px;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  background-image: url('img/arrow-left-big.svg');
 }
 
-/* Sağ butonlar */
 .nav-next {
-  right: 15px;
+  width: 50px;
+  height: 50px;
+  right: 0px;
+  background-image: url('img/arrow-right-big.svg');
 }
 
-/* Aktif slide göre görünür butonlar */
-#slide2:checked~#prev2,
-#slide3:checked~#prev3,
-#slide4:checked~#prev4,
-#slide5:checked~#prev5 {
+#slide1:checked~.nav-next[for="slide2"],
+#slide2:checked~.nav-next[for="slide3"],
+#slide3:checked~.nav-next[for="slide4"],
+#slide4:checked~.nav-next[for="slide5"],
+#slide5:checked~.nav-next[for="slide6"],
+#slide6:checked~.nav-next[for="slide7"],
+#slide7:checked~.nav-next[for="slide8"],
+#slide8:checked~.nav-next[for="slide9"],
+#slide9:checked~.nav-next[for="slide10"] {
   opacity: 1;
   pointer-events: auto;
 }
 
-#slide1:checked~#next1,
-#slide2:checked~#next2,
-#slide3:checked~#next3,
-#slide4:checked~#next4 {
+#slide2:checked~.nav-prev[for="slide1"],
+#slide3:checked~.nav-prev[for="slide2"],
+#slide4:checked~.nav-prev[for="slide3"],
+#slide5:checked~.nav-prev[for="slide4"],
+#slide6:checked~.nav-prev[for="slide5"],
+#slide7:checked~.nav-prev[for="slide6"],
+#slide8:checked~.nav-prev[for="slide7"],
+#slide9:checked~.nav-prev[for="slide8"],
+#slide10:checked~.nav-prev[for="slide9"] {
   opacity: 1;
   pointer-events: auto;
 }
@@ -879,7 +881,6 @@ input[type="radio"] {
   text-decoration: underline;
 }
 
-
 .itp-review-section {
   width: 100vw;
   position: relative;
@@ -933,11 +934,6 @@ input[type="radio"] {
   color: #6c757d;
   font-weight: 500;
   border-bottom: 3px solid transparent;
-  transition: color 0.3s;
-}
-
-.review-tab-btn:hover {
-  color: #000;
 }
 
 .review-tabs-wrapper input#tab-videos:checked~.review-tabs label[for="tab-videos"],
@@ -964,24 +960,24 @@ input[type="radio"] {
 }
 
 .review-tabs-wrapper input#tab-videos:checked~.review-content #panel-videos {
-  display: block;
+  display: inline-block;
 }
 
 .review-tabs-wrapper input#tab-text-reviews:checked~.review-content #panel-text-reviews {
-  display: block;
+  display: inline-block;
 }
 
 .slider-wrapper {
   position: relative;
   width: 1350px;
   height: 325px;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
 }
 
 .slider-outer {
   width: 1350px;
   overflow: hidden;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
   position: relative;
 }
 
@@ -1045,7 +1041,6 @@ input[type="radio"] {
   opacity: 0.5;
 }
 
-/* === SLIDER POZİSYONLARI === */
 #itp-r1:checked~.slides {
   transform: translateX(0);
 }
@@ -1094,11 +1089,9 @@ input[type="radio"] {
   transform: translateX(-3014px);
 }
 
-/* === OK BUTONLARI === */
 .nav-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 28px;
   z-index: 2;
   background: #fff;
@@ -1108,7 +1101,6 @@ input[type="radio"] {
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
 }
 
 .nav-prev {
@@ -1125,7 +1117,6 @@ input[type="radio"] {
   background-image: url('img/arrow-right-big.svg');
 }
 
-/* İleri Butonları (şarta göre görünür) */
 #itp-r1:checked~.nav-next[for="itp-r2"],
 #itp-r2:checked~.nav-next[for="itp-r3"],
 #itp-r3:checked~.nav-next[for="itp-r4"],
@@ -1141,7 +1132,6 @@ input[type="radio"] {
   pointer-events: auto;
 }
 
-/* Geri Butonları (şarta göre görünür) */
 #itp-r2:checked~.nav-prev[for="itp-r1"],
 #itp-r3:checked~.nav-prev[for="itp-r2"],
 #itp-r4:checked~.nav-prev[for="itp-r3"],
@@ -1157,7 +1147,6 @@ input[type="radio"] {
   pointer-events: auto;
 }
 
-/* === BUTONLAR === */
 .btn-actions {
   text-align: center;
   margin-top: 30px;
@@ -1174,11 +1163,6 @@ input[type="radio"] {
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
-}
-
-.btn-actions .btn-watch-all:hover,
-.btn-actions .btn-read-all:hover {
-  background: #d10244;
 }
 
 .review-tabs-wrapper input#tab-videos:checked~.btn-actions .btn-watch-all {
@@ -1403,7 +1387,6 @@ input[type="radio"] {
   animation: fadeIn 0.5s;
 }
 
-
 #tab-museums:checked~.tab-buttons-container label[for="tab-museums"],
 #tab-mosques:checked~.tab-buttons-container label[for="tab-mosques"],
 #tab-landmarks:checked~.tab-buttons-container label[for="tab-landmarks"],
@@ -1504,10 +1487,8 @@ input[type="radio"] {
 .itp-subscribe-section .text-content p {
   font-size: 16px;
   font-weight: 300;
-  max-width: 480px;
   line-height: 1.6;
 }
-
 
 .subscribe-form .input-group {
   height: 55px;
