@@ -72,6 +72,11 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   white-space: nowrap;
+  transition: color 0.5s ease;
+}
+
+.top-bar a:hover {
+  color: #F0034E;
 }
 
 .lang-dropdown {
@@ -85,20 +90,19 @@ body {
 
 .buy-now-btn {
   background-color: #F0034E;
+  width: 101px;
+  height: 40px;
   color: #FFF !important;
   border: none;
   padding: 8px 16px;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 
 .buy-now-btn:hover {
-  color: #000 !important;
-  background-color: #FFF !important;
-  border: 1px solid #F0034E;
-  cursor: pointer;
+  color: #FFFFFF !important;
+  background-color: #c40812 !important;
 }
 
 .navbar {
@@ -120,7 +124,7 @@ body {
   font-weight: bold;
   color: #000;
   padding: 0.5rem 0.75rem;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
   white-space: nowrap;
 }
 
@@ -150,7 +154,6 @@ body {
   margin: 0;
   line-height: 1;
 }
-
 
 .itp-hero {
   position: relative;
@@ -216,11 +219,15 @@ body {
 
 .hero-btn {
   display: inline-block;
+  width: 202px;
+  height: 41px;
   background-color: #f0034e;
   color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-align: center;
   text-decoration: none;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 10px;
   transition: background 0.3s ease;
@@ -311,30 +318,32 @@ body {
   font-size: 15px;
 }
 
+/* === Slider Wrapper === */
 .itp-slider {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 50px 15px;
   background: #f8f9fa;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 1;
 }
 
 .slider-header {
   text-align: left;
   padding: 0 15px 30px;
   max-width: 1440px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
 }
 
 .slider-header p {
-  font-size: 16px;
-  color: #f0034e;
+  font-size: 20px;
+  color: #4F4F4F;
   font-weight: 500;
 }
 
 .slider-header h2 {
-  font-size: 24px;
+  font-size: 38px;
   font-weight: 700;
   color: #000;
   margin: 0;
@@ -344,44 +353,40 @@ input[type="radio"] {
   display: none;
 }
 
-.card-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0 15px 20px;
-  max-width: 1440px;
+.slider-outer {
+  position: relative;
+  width: calc(244px * 5 + 28px * 4);
   margin: 0 auto;
-  box-sizing: border-box;
-  gap: 28px;
+  overflow: visible;
+  z-index: 2;
+}
+
+.card-slider.slides {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77, 0, .18, 1);
+}
+
+.card-slider.slides>.card {
+  flex: 0 0 244px;
+  margin-right: 28px;
+}
+
+.card-slider.slides>.card:last-child {
+  margin-right: 0;
 }
 
 .card {
+  box-sizing: border-box;
   flex: 0 0 244px;
   max-width: 244px;
-  box-sizing: border-box;
-}
-
-.card {
-  flex: 0 0 244px;
   border: none;
-  box-shadow: none;
-  overflow: hidden;
   border-radius: 12px;
-  cursor: pointer;
   background: #f8f9fa;
-  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
   display: flex;
-  justify-content: center; 
-  text-align: left;
   flex-direction: column;
-}
-
-.hover-video {
-  width: 244px;
-  height: 370px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px 12px 0 0;
+  user-select: none;
 }
 
 .card-image {
@@ -393,18 +398,16 @@ input[type="radio"] {
   flex-shrink: 0;
 }
 
-.card-image img {
-  position: absolute;
-  top: 280px;
-  right: 12px;
-  width: 80px;
-  height: 80px;
-  z-index: 5;
-  pointer-events: none;
+.card-image img,
+.card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-body {
-  padding: 12px 0px;
+  padding: 12px 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -440,65 +443,67 @@ input[type="radio"] {
 }
 
 .old-price span {
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   color: #aaa;
 }
 
 .new-price {
   font-size: 14px;
-  color: #f0034e;
   font-weight: 600;
+  color: #f0034e;
 }
 
 .new-price span {
+  margin-left: 4px;
   font-weight: 500;
   color: #f0034e;
-  margin-left: 4px;
 }
-#slide1:checked~.slides {
+
+
+#itp-s1:checked~.card-slider.slides {
   transform: translateX(0);
 }
 
-#slide2:checked~.slides {
+#itp-s2:checked~.card-slider.slides {
   transform: translateX(-274px);
 }
 
-#slide3:checked~.slides {
+#itp-s3:checked~.card-slider.slides {
   transform: translateX(-548px);
 }
 
-#slide4:checked~.slides {
+#itp-s4:checked~.card-slider.slides {
   transform: translateX(-822px);
 }
 
-#slide5:checked~.slides {
+#itp-s5:checked~.card-slider.slides {
   transform: translateX(-1096px);
 }
 
-#slide6:checked~.slides {
+#itp-s6:checked~.card-slider.slides {
   transform: translateX(-1370px);
 }
 
-#slide7:checked~.slides {
+#itp-s7:checked~.card-slider.slides {
   transform: translateX(-1644px);
 }
 
-#slide8:checked~.slides {
+#itp-s8:checked~.card-slider.slides {
   transform: translateX(-1918px);
 }
 
-#slide9:checked~.slides {
+#itp-s9:checked~.card-slider.slides {
   transform: translateX(-2192px);
 }
 
-#slide10:checked~.slides {
+#itp-s10:checked~.card-slider.slides {
   transform: translateX(-2466px);
 }
 
 .nav-btn {
   position: absolute;
-  top: 50%;
+  top: 30%;
   font-size: 28px;
   z-index: 2;
   background: #fff;
@@ -524,28 +529,28 @@ input[type="radio"] {
   background-image: url('img/arrow-right-big.svg');
 }
 
-#slide1:checked~.nav-next[for="slide2"],
-#slide2:checked~.nav-next[for="slide3"],
-#slide3:checked~.nav-next[for="slide4"],
-#slide4:checked~.nav-next[for="slide5"],
-#slide5:checked~.nav-next[for="slide6"],
-#slide6:checked~.nav-next[for="slide7"],
-#slide7:checked~.nav-next[for="slide8"],
-#slide8:checked~.nav-next[for="slide9"],
-#slide9:checked~.nav-next[for="slide10"] {
+#itp-s1:checked~.nav-next[for="itp-s2"],
+#itp-s2:checked~.nav-next[for="itp-s3"],
+#itp-s3:checked~.nav-next[for="itp-s4"],
+#itp-s4:checked~.nav-next[for="itp-s5"],
+#itp-s5:checked~.nav-next[for="itp-s6"],
+#itp-s6:checked~.nav-next[for="itp-s7"],
+#itp-s7:checked~.nav-next[for="itp-s8"],
+#itp-s8:checked~.nav-next[for="itp-s9"],
+#itp-s9:checked~.nav-next[for="itp-s10"] {
   opacity: 1;
   pointer-events: auto;
 }
 
-#slide2:checked~.nav-prev[for="slide1"],
-#slide3:checked~.nav-prev[for="slide2"],
-#slide4:checked~.nav-prev[for="slide3"],
-#slide5:checked~.nav-prev[for="slide4"],
-#slide6:checked~.nav-prev[for="slide5"],
-#slide7:checked~.nav-prev[for="slide6"],
-#slide8:checked~.nav-prev[for="slide7"],
-#slide9:checked~.nav-prev[for="slide8"],
-#slide10:checked~.nav-prev[for="slide9"] {
+#itp-s2:checked~.nav-prev[for="itp-s1"],
+#itp-s3:checked~.nav-prev[for="itp-s2"],
+#itp-s4:checked~.nav-prev[for="itp-s3"],
+#itp-s5:checked~.nav-prev[for="itp-s4"],
+#itp-s6:checked~.nav-prev[for="itp-s5"],
+#itp-s7:checked~.nav-prev[for="itp-s6"],
+#itp-s8:checked~.nav-prev[for="itp-s7"],
+#itp-s9:checked~.nav-prev[for="itp-s8"],
+#itp-s10:checked~.nav-prev[for="itp-s9"] {
   opacity: 1;
   pointer-events: auto;
 }
@@ -737,14 +742,14 @@ input[type="radio"] {
 }
 
 .download-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #4f4f4f;
   margin: 0 0 8px 0;
 }
 
 .download-title {
-  font-size: 26px;
+  font-size: 38px;
   font-weight: 700;
   color: #000;
   margin: 0;
@@ -1013,6 +1018,15 @@ input[type="radio"] {
   display: block;
 }
 
+.video-thumbnail img+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+}
+
 .play-button {
   position: absolute;
   top: 50%;
@@ -1089,9 +1103,9 @@ input[type="radio"] {
   transform: translateX(-3014px);
 }
 
-.nav-btn {
+.itp-review-section .nav-btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   font-size: 28px;
   z-index: 2;
   background: #fff;
@@ -1100,17 +1114,17 @@ input[type="radio"] {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
-.nav-prev {
+.itp-review-section .nav-prev {
   width: 50px;
   height: 50px;
   left: 0px;
   background-image: url('img/arrow-left-big.svg');
 }
 
-.nav-next {
+.itp-review-section .nav-next {
   width: 50px;
   height: 50px;
   right: 0px;
@@ -1173,6 +1187,105 @@ input[type="radio"] {
   display: inline-block;
 }
 
+/* CSS: append to styles.css */
+
+/* container and hide native radio buttons */
+.text-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-slider-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* slides flex container */
+.slides-text {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* individual review card */
+.text-review-card {
+  width: 254px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 325px;
+}
+
+.text-review-card .review-text {
+  flex-grow: 1;
+  color: #000;
+  font-family: poppins, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.text-review-card .read-more {
+  font-size: 16px;
+  color: #0ea5e9;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.text-review-card .author {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+/* slide positioning based on which radio is checked */
+#text-slide1:checked~.slides-text {
+  transform: translateX(0);
+}
+
+#text-slide2:checked~.slides-text {
+  transform: translateX(-274px);
+}
+
+#text-slide3:checked~.slides-text {
+  transform: translateX(-548px);
+}
+
+#text-slide4:checked~.slides-text {
+  transform: translateX(-822px);
+}
+
+#text-slide5:checked~.slides-text {
+  transform: translateX(-1096px);
+}
+
+/* arrows inherit .nav-prev and .nav-next from your existing CSS */
+/* show next arrow only when there is a next slide */
+#text-slide1:checked~.nav-next[for="text-slide2"],
+#text-slide2:checked~.nav-next[for="text-slide3"],
+#text-slide3:checked~.nav-next[for="text-slide4"],
+#text-slide4:checked~.nav-next[for="text-slide5"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* show prev arrow only when there is a previous slide */
+#text-slide2:checked~.nav-prev[for="text-slide1"],
+#text-slide3:checked~.nav-prev[for="text-slide2"],
+#text-slide4:checked~.nav-prev[for="text-slide3"],
+#text-slide5:checked~.nav-prev[for="text-slide4"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 .itp-about-section {
   height: 372px;
   background-color: #fff;
@@ -1188,14 +1301,14 @@ input[type="radio"] {
 }
 
 .about-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #4f4f4f;
   margin: 0 0 8px 0;
 }
 
 .about-title {
-  font-size: 26px;
+  font-size: 38px;
   font-weight: 700;
   color: #000;
   margin: 0;
@@ -1323,16 +1436,8 @@ input[type="radio"] {
 }
 
 .itp-attractions-section {
-  height: 707px;
-  padding: 60px 28.8px 60px 0px;
   background-color: #fff;
-}
-
-.itp-attractions-section h2 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 46px;
-  color: #000000;
+  padding: 60px 28.8px 60px 0;
 }
 
 .itp-attractions-section .text-start p {
@@ -1342,6 +1447,15 @@ input[type="radio"] {
   line-height: 1.5;
 }
 
+.itp-attractions-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Tab Buttons */
 .tab-buttons-container {
   display: flex;
   gap: 10px;
@@ -1371,15 +1485,43 @@ input[type="radio"] {
 }
 
 .tab-btn {
-  display: inline-block;
   padding: 10px 25px;
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   font-weight: 500;
   color: #333;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+input[name="attraction-tab"] {
+  display: none;
+}
+
+/* Active tab */
+#tab-museums:checked~.tab-buttons-container label[for="tab-museums"],
+#tab-mosques:checked~.tab-buttons-container label[for="tab-mosques"],
+#tab-landmarks:checked~.tab-buttons-container label[for="tab-landmarks"],
+#tab-towers:checked~.tab-buttons-container label[for="tab-towers"],
+#tab-airport:checked~.tab-buttons-container label[for="tab-airport"],
+#tab-sightseeing:checked~.tab-buttons-container label[for="tab-sightseeing"],
+#tab-special:checked~.tab-buttons-container label[for="tab-special"],
+#tab-shows:checked~.tab-buttons-container label[for="tab-shows"],
+#tab-zoos:checked~.tab-buttons-container label[for="tab-zoos"],
+#tab-Experiences:checked~.tab-buttons-container label[for="tab-Experiences"],
+#tab-family-friendly:checked~.tab-buttons-container label[for="tab-family-friendly"],
+#tab-outside:checked~.tab-buttons-container label[for="tab-outside"],
+#tab-outdoor:checked~.tab-buttons-container label[for="tab-outdoor"],
+#tab-services:checked~.tab-buttons-container label[for="tab-services"] {
+  background: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+/* Tab Content */
+.tab-content {
+  margin-top: 50px;
 }
 
 .tab-panel {
@@ -1387,26 +1529,13 @@ input[type="radio"] {
   animation: fadeIn 0.5s;
 }
 
-#tab-museums:checked~.tab-buttons-container label[for="tab-museums"],
-#tab-mosques:checked~.tab-buttons-container label[for="tab-mosques"],
-#tab-landmarks:checked~.tab-buttons-container label[for="tab-landmarks"],
-#tab-towers:checked~.tab-buttons-container label[for="tab-towers"],
-#tab-airport:checked~.tab-buttons-container label[for="tab-airport"] {
-  background-color: #212529;
-  color: #fff;
-  border-color: #212529;
-}
-
-.tab-content {
-  margin-top: 50px;
-}
-
+/* Show panels */
 #tab-museums:checked~.tab-content #content-museums {
   display: block;
 }
 
 #tab-mosques:checked~.tab-content #content-mosques {
-  display: block;
+  display: flex;
 }
 
 #tab-landmarks:checked~.tab-content #content-landmarks {
@@ -1421,6 +1550,7 @@ input[type="radio"] {
   display: block;
 }
 
+/* Common List Styling */
 .attraction-list {
   list-style: none;
   padding-left: 1.2rem;
@@ -1428,8 +1558,8 @@ input[type="radio"] {
 }
 
 .attraction-list li {
-  margin-bottom: 1rem;
   position: relative;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
 }
 
@@ -1452,17 +1582,849 @@ input[type="radio"] {
 }
 
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ======================
+   MUSEUMS SLIDER
+   (Tab: Museums)
+   ====================== */
+#content-museums .museum-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2rem;
 }
+
+#content-museums input[name="museum-slider"] {
+  display: none;
+}
+
+#content-museums .museum-slides {
+  display: flex;
+  width: 100%;
+  /* 5 positions */
+  transition: transform 0.5s ease;
+}
+
+#content-museums .museum-list {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Slide positions */
+#content-museums #m-r1:checked~.museum-slides {
+  transform: translateX(0%);
+}
+
+#content-museums #m-r2:checked~.museum-slides {
+  transform: translateX(-25%);
+}
+
+#content-museums #m-r3:checked~.museum-slides {
+  transform: translateX(-50%);
+}
+
+#content-museums #m-r4:checked~.museum-slides {
+  transform: translateX(-75%);
+}
+
+#content-museums #m-r5:checked~.museum-slides {
+  transform: translateX(-100%);
+}
+
+/* Nav buttons */
+#content-museums .nav-btn {
+  position: absolute;
+  top: 30%;
+  font-size: 28px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#content-museums .nav-prev {
+  left: 0;
+  background-image: url('img/arrow-left-big.svg');
+}
+
+#content-museums .nav-next {
+  right: 0;
+  background-image: url('img/arrow-right-big.svg');
+}
+
+/* Show prev/next appropriately */
+#content-museums #m-r2:checked~.nav-prev[for="m-r1"],
+#content-museums #m-r3:checked~.nav-prev[for="m-r2"],
+#content-museums #m-r4:checked~.nav-prev[for="m-r3"],
+#content-museums #m-r5:checked~.nav-prev[for="m-r4"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#content-museums #m-r1:checked~.nav-next[for="m-r2"],
+#content-museums #m-r2:checked~.nav-next[for="m-r3"],
+#content-museums #m-r3:checked~.nav-next[for="m-r4"],
+#content-museums #m-r4:checked~.nav-next[for="m-r5"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===============================
+   MOSQUES GRID
+   (Tab: Mosques)
+   =============================== */
+#content-mosques {
+  display: none;
+}
+
+#tab-mosques:checked~.tab-content #content-mosques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-mosques .mosques-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+#content-mosques .attraction-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#content-mosques .attraction-list li {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#content-mosques .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#content-mosques .attraction-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#content-mosques .attraction-list a:hover {
+  color: #F0034E;
+}
+
+/* ======================
+   LANDMARKS SLIDER (Tab: Landmarks)
+   ====================== */
+
+/* Hide slider by default */
+#content-landmarks .landmarks-slider-wrapper {
+  display: none;
+}
+
+/* Show slider only when Landmarks tab is active */
+#tab-landmarks:checked~.tab-content #content-landmarks .landmarks-slider-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Hide the radio inputs */
+#tab-landmarks:checked~.tab-content #content-landmarks .landmarks-slider-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Slides container: flex */
+#tab-landmarks:checked~.tab-content #content-landmarks .landmark-slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Each slide = 25% of wrapper */
+#tab-landmarks:checked~.tab-content #content-landmarks .landmark-list {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Slide positions */
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r1:checked~.landmark-slides {
+  transform: translateX(0%);
+}
+
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.landmark-slides {
+  transform: translateX(-25%);
+}
+
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r3:checked~.landmark-slides {
+  transform: translateX(-50%);
+}
+
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r4:checked~.landmark-slides {
+  transform: translateX(-75%);
+}
+
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r5:checked~.landmark-slides {
+  transform: translateX(-100%);
+}
+
+/* Nav button common style */
+#tab-landmarks:checked~.tab-content #content-landmarks .nav-btn {
+  position: absolute;
+  top: 30%;
+  font-size: 28px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Prev arrow */
+#tab-landmarks:checked~.tab-content #content-landmarks .nav-prev {
+  left: 0;
+  background-image: url('img/arrow-left-big.svg');
+}
+
+/* Next arrow */
+#tab-landmarks:checked~.tab-content #content-landmarks .nav-next {
+  right: 0;
+  background-image: url('img/arrow-right-big.svg');
+}
+
+/* Show prev only on slides 2–5 */
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-prev[for="l-r1"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r3:checked~.nav-prev[for="l-r2"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r4:checked~.nav-prev[for="l-r3"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r5:checked~.nav-prev[for="l-r4"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Show next only on slides 1–4 */
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r1:checked~.nav-next[for="l-r2"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-next[for="l-r3"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r3:checked~.nav-next[for="l-r4"],
+#tab-landmarks:checked~.tab-content #content-landmarks #l-r4:checked~.nav-next[for="l-r5"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================
+   TOWERS GRID (Tab: Towers)
+   ========================= */
+
+/* Hide by default */
+#content-towers {
+  display: none;
+}
+
+/* Show as 4-column grid when Towers tab is active */
+#tab-towers:checked~.tab-content #content-towers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+/* Each tower-list = 25% minus gap */
+#tab-towers:checked~.tab-content #content-towers .tower-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* Reuse common list styling */
+#tab-towers:checked~.tab-content #content-towers .attraction-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#tab-towers:checked~.tab-content #content-towers .attraction-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#tab-towers:checked~.tab-content #content-towers .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#tab-towers:checked~.tab-content #content-towers .attraction-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#tab-towers:checked~.tab-content #content-towers .attraction-list a:hover {
+  color: #F0034E;
+}
+
+/* ===========================
+   AIRPORT TRANSFERS GRID
+   (Tab: Airport)
+   =========================== */
+
+/* Hide by default */
+#content-airport {
+  display: none;
+}
+
+/* Show as 4-column grid when Airport tab is active */
+#tab-airport:checked~.tab-content #content-airport {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+/* Each airport-list column = 25% minus gap */
+#tab-airport:checked~.tab-content #content-airport .airport-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* Reuse common list styling */
+#tab-airport:checked~.tab-content #content-airport .attraction-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#tab-airport:checked~.tab-content #content-airport .attraction-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#tab-airport:checked~.tab-content #content-airport .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#tab-airport:checked~.tab-content #content-airport .attraction-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#tab-airport:checked~.tab-content #content-airport .attraction-list a:hover {
+  color: #F0034E;
+}
+
+/* ==============================
+   SIGHTSEEING GRID (Tab: Sightseeing)
+   ============================== */
+
+/* Hide by default */
+#content-sightseeing {
+  display: none;
+}
+
+/* Show as 4-column grid when Sightseeing tab is active */
+#tab-sightseeing:checked~.tab-content #content-sightseeing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+/* Each column = 25% minus the gap */
+#tab-sightseeing:checked~.tab-content #content-sightseeing .sightseeing-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* Reuse common list styling */
+#tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list a:hover {
+  color: #F0034E;
+}
+
+/* ---- Special Offers slider wrapper ---- */
+.special-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* ---- Hide native radio controls ---- */
+.special-slider-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* ---- Slides container ---- */
+.special-slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* ---- Each slide ---- */
+.special-list {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* ---- Shift slides when radio checked ---- */
+#s-r1:checked~.special-slides {
+  transform: translateX(0%);
+}
+
+#s-r2:checked~.special-slides {
+  transform: translateX(-100%);
+}
+
+#s-r3:checked~.special-slides {
+  transform: translateX(-200%);
+}
+
+#s-r4:checked~.special-slides {
+  transform: translateX(-300%);
+}
+
+#s-r5:checked~.special-slides {
+  transform: translateX(-400%);
+}
+
+/* ---- Attraction list styling ---- */
+.attraction-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.attraction-list li {
+  margin-bottom: 0.75rem;
+}
+
+.attraction-list a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.attraction-list a:hover {
+  color: #f0034e;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-prev {
+  left: 10px;
+  background: url("img/arrow-left-big.svg") no-repeat center;
+}
+
+.nav-next {
+  right: 10px;
+  background: url("img/arrow-right-big.svg") no-repeat center;
+}
+
+/* ---- Show/hide nav buttons for each slide ---- */
+#s-r1:checked~.nav-prev[for="s-r1"],
+#s-r2:checked~.nav-prev[for="s-r2"],
+#s-r3:checked~.nav-prev[for="s-r3"],
+#s-r4:checked~.nav-prev[for="s-r4"],
+#s-r5:checked~.nav-prev[for="s-r5"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#s-r1:checked~.nav-next[for="s-r2"],
+#s-r2:checked~.nav-next[for="s-r3"],
+#s-r3:checked~.nav-next[for="s-r4"],
+#s-r4:checked~.nav-next[for="s-r5"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#s-r2:checked~.nav-prev[for="s-r1"],
+#s-r3:checked~.nav-prev[for="s-r2"],
+#s-r4:checked~.nav-prev[for="s-r3"],
+#s-r5:checked~.nav-prev[for="s-r4"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#s-r5:checked~.nav-next[for="s-r5"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================================
+   SPECIAL OFFERS (Özel Teklifler) TAB
+   ================================ */
+/* paneli gizle */
+#content-special {
+  display: none;
+  margin-top: 2rem;
+}
+
+/* sekme seçildiğinde göster */
+#tab-special:checked~.tab-content #content-special {
+  display: block;
+}
+
+/* slider wrapper */
+#content-special .special-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* gizle radio’lar */
+#content-special .special-slider-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* slides container: tam genişlik */
+#content-special .special-slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+/* her bir liste %25 genişlik */
+#content-special .special-list {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* radio’ya göre kaydır */
+#content-special #s-r1:checked~.special-slides {
+  transform: translateX(0%);
+}
+
+#content-special #s-r2:checked~.special-slides {
+  transform: translateX(-25%);
+}
+
+#content-special #s-r3:checked~.special-slides {
+  transform: translateX(-50%);
+}
+
+#content-special #s-r4:checked~.special-slides {
+  transform: translateX(-75%);
+}
+
+#content-special #s-r5:checked~.special-slides {
+  transform: translateX(-100%);
+}
+
+/* liste stilleri */
+#content-special .attraction-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#content-special .attraction-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+#content-special .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#content-special .attraction-list a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#content-special .attraction-list a:hover {
+  color: #f0034e;
+}
+
+/* nav butonlar */
+#content-special .nav-btn {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#content-special .nav-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#content-special .nav-prev {
+  left: 10px;
+  background: url("img/arrow-left-big.svg") no-repeat center;
+}
+
+#content-special .nav-next {
+  right: 10px;
+  background: url("img/arrow-right-big.svg") no-repeat center;
+}
+
+/* hangi butonlar gözüksün/gizlensin */
+#content-special #s-r1:checked~.nav-prev[for="s-r1"],
+#content-special #s-r2:checked~.nav-prev[for="s-r2"],
+#content-special #s-r3:checked~.nav-prev[for="s-r3"],
+#content-special #s-r4:checked~.nav-prev[for="s-r4"],
+#content-special #s-r5:checked~.nav-prev[for="s-r5"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#content-special #s-r1:checked~.nav-next[for="s-r2"],
+#content-special #s-r2:checked~.nav-next[for="s-r3"],
+#content-special #s-r3:checked~.nav-next[for="s-r4"],
+#content-special #s-r4:checked~.nav-next[for="s-r5"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#content-special #s-r2:checked~.nav-prev[for="s-r1"],
+#content-special #s-r3:checked~.nav-prev[for="s-r2"],
+#content-special #s-r4:checked~.nav-prev[for="s-r3"],
+#content-special #s-r5:checked~.nav-prev[for="s-r4"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#content-special #s-r5:checked~.nav-next[for="s-r5"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===========================
+   SHOWS GRID (Tab: Shows)
+   =========================== */
+#content-shows {
+  display: none;
+}
+
+#tab-shows:checked~.tab-content #content-shows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-shows .shows-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+#content-shows .attraction-list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#content-shows .attraction-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#content-shows .attraction-list li::before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #555;
+  font-weight: bold;
+}
+
+#content-shows .attraction-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#content-shows .attraction-list a:hover {
+  color: #F0034E;
+}
+
+/* ===========================
+   ZOOS GRID (Tab: Zoos)
+   =========================== */
+#content-zoos {
+  display: none;
+}
+
+#tab-zoos:checked~.tab-content #content-zoos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-zoos .zoos-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* ================================
+   EXPERIENCES GRID (Tab: Experiences)
+   ================================ */
+#content-Expreriences {
+  display: none;
+}
+
+#tab-Experiences:checked~.tab-content #content-Expreriences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-Expreriences .Experience-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* =====================================
+   FAMILY FRIENDLY GRID (Tab: Family Friendly)
+   ===================================== */
+#content-family-friendly {
+  display: none;
+}
+
+#tab-family-friendly:checked~.tab-content #content-family-friendly {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-family-friendly .family-friendly-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* ==============================
+   OUTSIDE THE CITY GRID (Tab: Outside)
+   ============================== */
+#content-outside {
+  display: none;
+}
+
+#tab-outside:checked~.tab-content #content-outside {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-outside .outside-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* =============================
+   OUTDOOR ACTIVITIES GRID (Tab: Outdoor)
+   ============================= */
+#content-outdoor {
+  display: none;
+}
+
+#tab-outdoor:checked~.tab-content #content-outdoor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-outdoor .outdoor-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
+/* =============================
+   SERVICES & BENEFITS GRID (Tab: Services)
+   ============================= */
+#content-services {
+  display: none;
+}
+
+#tab-services:checked~.tab-content #content-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+#content-services .services-list {
+  flex: 1 1 calc(25% - 2rem);
+  box-sizing: border-box;
+}
+
 
 .itp-subscribe-section {
   width: 100vw;
