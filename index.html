@@ -19,47 +19,180 @@
 
     <div class="container-1440">
 
-        <header class="itp-header">
-            <div class="header-inner">
-                <div class="logo-container">
-                    <a href="#" class="navbar-brand">
-                        <img src="img/itp-logo.svg" class="logo-img" alt="Istanbul Tourist Pass Logo" />
-                    </a>
-                    <a href="#" class="logo-subtitle">Cityberry Tourism is a member of TURSAB 11745</a>
-                </div>
-                <div class="itp-nav-container">
-                    <div class="top-bar">
-                        <a href="https://istanbultouristpass.com/become-affiliate-partner">Become a Partner</a>
-                        <a href="https://istanbultouristpass.com/free-digital-istanbul-guidebook">Tips & Guides</a>
-                        <a href="https://istanbultouristpass.com/frequently-asked-questions">FAQs</a>
-                        <a href="https://istanbultouristpass.com/contact">Contact Us</a>
-                        <a href="https://myistanbul.istanbultouristpass.com/">Manage Your Pass</a>
-                        <div class="dropdown">
-                            <a class="dropdown-toggle lang-dropdown" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag"> EN
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">EN</a></li>
-                                <li><a class="dropdown-item" href="#">TR</a></li>
-                            </ul>
-                        </div>
-                        <a href="https://istanbultouristpass.com/istanbul-pass" class="btn buy-now-btn">Buy Now</a>
-                    </div>
+<header class="itp-header border-bottom py-3">
+  <div class="header-inner container-fluid">
 
-                    <nav class="navbar navbar-expand">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/what-you-get">What You Get</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/how-it-works">How It Works</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/whats-included">Attractions</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/plan-and-save">Plan & Save</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/istanbul-pass">Passes & Prices</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/groups">Group Requests</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+    <!-- Mobil: Logo sola, Buton + Hamburger sağa -->
+    <div class="d-lg-none d-flex align-items-center justify-content-between w-100 px-3">
+
+      <!-- Logo sola yapışık -->
+      <a href="#" class="navbar-brand m-0">
+        <img src="img/itp-logo.svg" alt="Istanbul Tourist Pass Logo" height="36">
+      </a>
+
+      <!-- Sağda: Buton + Menü -->
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://istanbultouristpass.com/istanbul-pass" class="btn fw-bold text-white px-3 py-1"
+           style="background-color: #ec0e5a; border-radius: 8px;">
+          Buy Now
+        </a>
+        <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Masaüstü -->
+    <div class="d-none d-lg-flex justify-content-between align-items-center w-100">
+
+      <!-- Logo + Alt yazı -->
+      <div class="logo-container d-flex flex-column">
+        <a href="#" class="navbar-brand mb-1">
+          <img src="img/itp-logo.svg" class="logo-img" alt="Istanbul Tourist Pass Logo" />
+        </a>
+        <a href="#" class="logo-subtitle text-muted small">Cityberry Tourism is a member of TURSAB 11745</a>
+      </div>
+
+      <!-- Menü ve Dil Seçimi -->
+      <div class="itp-nav-container d-flex flex-column align-items-end">
+
+        <!-- Üst menü -->
+        <div class="top-bar mb-2">
+          <a href="https://istanbultouristpass.com/become-affiliate-partner">Become a Partner</a>
+          <a href="https://istanbultouristpass.com/free-digital-istanbul-guidebook">Tips & Guides</a>
+          <a href="https://istanbultouristpass.com/frequently-asked-questions">FAQs</a>
+          <a href="https://istanbultouristpass.com/contact">Contact Us</a>
+          <a href="https://myistanbul.istanbultouristpass.com/">Manage Your Pass</a>
+
+          <!-- Language Dropdown -->
+          <div class="dropdown d-inline-block">
+            <a class="dropdown-toggle lang-dropdown" href="#" data-bs-toggle="dropdown">
+              <img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag"> EN
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <!-- Dil seçenekleri alfabetik sırada -->
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/sa.png" class="me-2"> ARAB</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/bg.png" class="me-2"> BG</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/cn.png" class="me-2"> CN</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/de.png" class="me-2"> DE</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/gb.png" class="me-2"> EN</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/es.png" class="me-2"> ES</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/fr.png" class="me-2"> FR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/gr.png" class="me-2"> GR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/hr.png" class="me-2"> HR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/hu.png" class="me-2"> HU</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/id.png" class="me-2"> ID</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/il.png" class="me-2"> IL</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/in.png" class="me-2"> IN</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/ir.png" class="me-2"> IR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/it.png" class="me-2"> IT</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/jp.png" class="me-2"> JP</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/kr.png" class="me-2"> KR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/mk.png" class="me-2"> MK</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/pk.png" class="me-2"> PK</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/pl.png" class="me-2"> PL</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/pt.png" class="me-2"> PT</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/ro.png" class="me-2"> RO</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/ru.png" class="me-2"> RU</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/tr.png" class="me-2"> TR</a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/16x12/tw.png" class="me-2"> TW</a></li>
+            </ul>
+          </div>
+
+          <!-- Masaüstü Buy Now -->
+          <a href="https://istanbultouristpass.com/istanbul-pass" class="btn buy-now-btn">Buy Now</a>
+        </div>
+
+        <!-- Alt navbar -->
+        <nav class="navbar navbar-expand">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/what-you-get">What You Get</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/how-it-works">How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/whats-included">Attractions</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/plan-and-save">Plan & Save</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/istanbul-pass">Passes & Prices</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://istanbultouristpass.com/groups">Group Requests</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ✅ Mobil Menü: Offcanvas -->
+<div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header justify-content-between border-bottom">
+    <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fs-4 text-danger">&larr;</span>
+    </button>
+    <h5 class="offcanvas-title fw-bold mx-auto">Menu</h5>
+    <div style="width: 32px;"></div>
+  </div>
+
+  <div class="offcanvas-body px-3">
+    <!-- Dil Seçici -->
+   <div class="dropdown mb-4">
+  <button class="btn border rounded w-100 d-flex justify-content-between align-items-center px-3 py-2 fw-semibold"
+          type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span><img src="https://flagcdn.com/24x18/gb.png" class="me-2"> EN</span>
+    <span class="ms-auto">▼</span>
+  </button>
+  <ul class="dropdown-menu w-100" style="max-height: 300px; overflow-y: auto;">
+  <li>
+    <h6 class="dropdown-header fs-5 fw-bold py-2 px-3">Language</h6>
+  </li> 
+
+  <!-- Alfabetik sıralı diller -->
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/sa.png" class="me-2"> ARAB</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/bg.png" class="me-2"> BG</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/cn.png" class="me-2"> CN</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/de.png" class="me-2"> DE</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/gb.png" class="me-2"> EN</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/es.png" class="me-2"> ES</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/fr.png" class="me-2"> FR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/gr.png" class="me-2"> GR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/hr.png" class="me-2"> HR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/hu.png" class="me-2"> HU</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/id.png" class="me-2"> ID</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/il.png" class="me-2"> IL</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/in.png" class="me-2"> IN</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/ir.png" class="me-2"> IR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/it.png" class="me-2"> IT</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/jp.png" class="me-2"> JP</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/kr.png" class="me-2"> KR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/mk.png" class="me-2"> MK</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/pk.png" class="me-2"> PK</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/pl.png" class="me-2"> PL</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/pt.png" class="me-2"> PT</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/ro.png" class="me-2"> RO</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/ru.png" class="me-2"> RU</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/tr.png" class="me-2"> TR</a></li>
+  <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="https://flagcdn.com/24x18/tw.png" class="me-2"> TW</a></li>
+</ul>
+
+</div>
+
+
+    <!-- Menü Linkleri -->
+    <ul class="list-group list-group-flush fs-6 fw-semibold">
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">What You Get</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">How It Works</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Attractions</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Plan & Save</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Passes & Prices</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Become a Partner</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Group Requests</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">FAQs</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Reviews</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Tips & Guides</a></li>
+      <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
         <div class="itp-banner-bar">
             <p>Starting from just €139</p>

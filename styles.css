@@ -26,6 +26,50 @@ body {
   align-items: center;
   padding-top: 16px;
 }
+.offcanvas-body .list-group-item {
+    border-color: #eee;
+    padding: 14px 10px;
+  }
+
+  .offcanvas-body .form-select {
+    border-radius: 8px;
+  }
+
+  .offcanvas-title {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+  .dropdown-menu .dropdown-item img {
+    width: 20px;
+    height: auto;
+  }
+
+  .navbar-toggler-icon {
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    position: relative;
+  }
+  
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+  }
+
+  .navbar-toggler-icon::before {
+    top: -8px;
+  }
+
+  .navbar-toggler-icon::after {
+    top: 8px;
+  }
 
 .logo-container {
   display: flex;
