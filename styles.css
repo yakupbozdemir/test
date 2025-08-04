@@ -511,39 +511,23 @@ input[type="radio"] {
 }
 
 #itp-s2:checked~.card-slider.slides {
-  transform: translateX(-274px);
+  transform: translateX(-270px);
 }
 
 #itp-s3:checked~.card-slider.slides {
-  transform: translateX(-548px);
+  transform: translateX(-544px);
 }
 
 #itp-s4:checked~.card-slider.slides {
-  transform: translateX(-822px);
+  transform: translateX(-816px);
 }
 
 #itp-s5:checked~.card-slider.slides {
-  transform: translateX(-1096px);
+  transform: translateX(-1088px);
 }
 
 #itp-s6:checked~.card-slider.slides {
-  transform: translateX(-1370px);
-}
-
-#itp-s7:checked~.card-slider.slides {
-  transform: translateX(-1644px);
-}
-
-#itp-s8:checked~.card-slider.slides {
-  transform: translateX(-1918px);
-}
-
-#itp-s9:checked~.card-slider.slides {
-  transform: translateX(-2192px);
-}
-
-#itp-s10:checked~.card-slider.slides {
-  transform: translateX(-2466px);
+  transform: translateX(-1360px);
 }
 
 .slider-outer>.nav-btn {
@@ -579,10 +563,7 @@ input[type="radio"] {
 #itp-s3:checked~.nav-next[for="itp-s4"],
 #itp-s4:checked~.nav-next[for="itp-s5"],
 #itp-s5:checked~.nav-next[for="itp-s6"],
-#itp-s6:checked~.nav-next[for="itp-s7"],
-#itp-s7:checked~.nav-next[for="itp-s8"],
-#itp-s8:checked~.nav-next[for="itp-s9"],
-#itp-s9:checked~.nav-next[for="itp-s10"] {
+#itp-s6:checked~.nav-next[for="itp-s7"] {
   opacity: 1;
   pointer-events: auto;
 }
@@ -592,10 +573,7 @@ input[type="radio"] {
 #itp-s4:checked~.nav-prev[for="itp-s3"],
 #itp-s5:checked~.nav-prev[for="itp-s4"],
 #itp-s6:checked~.nav-prev[for="itp-s5"],
-#itp-s7:checked~.nav-prev[for="itp-s6"],
-#itp-s8:checked~.nav-prev[for="itp-s7"],
-#itp-s9:checked~.nav-prev[for="itp-s8"],
-#itp-s10:checked~.nav-prev[for="itp-s9"] {
+#itp-s7:checked~.nav-prev[for="itp-s6"] {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1060,7 +1038,7 @@ input[type="radio"] {
   display: block;
 }
 
-.video-thumbnail img+img {
+.video-thumbnail a {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1145,6 +1123,39 @@ input[type="radio"] {
   transform: translateX(-3014px);
 }
 
+#itp-r13:checked~.slides {
+  transform: translateX(-3288px);
+}
+
+#itp-r14:checked~.slides {
+  transform: translateX(-3562px);
+}
+
+#itp-r15:checked~.slides {
+  transform: translateX(-3836px);
+}
+#itp-r16:checked~.slides {
+  transform: translateX(-4110px);
+}
+#itp-r17:checked~.slides {
+  transform: translateX(-4384px);
+}
+#itp-r18:checked~.slides {
+  transform: translateX(-4658px);
+}
+#itp-r19:checked~.slides {
+  transform: translateX(-4932px);
+}
+#itp-r20:checked~.slides {
+  transform: translateX(-5206px);
+}
+#itp-r21:checked~.slides {
+  transform: translateX(-5480px);
+}
+#itp-r22:checked~.slides {
+  transform: translateX(-5754px);
+}
+
 .itp-review-section .nav-btn {
   position: absolute;
   top: 40%;
@@ -1183,7 +1194,17 @@ input[type="radio"] {
 #itp-r8:checked~.nav-next[for="itp-r9"],
 #itp-r9:checked~.nav-next[for="itp-r10"],
 #itp-r10:checked~.nav-next[for="itp-r11"],
-#itp-r11:checked~.nav-next[for="itp-r12"] {
+#itp-r11:checked~.nav-next[for="itp-r12"],
+#itp-r12:checked~.nav-next[for="itp-r13"],
+#itp-r13:checked~.nav-next[for="itp-r14"],
+#itp-r14:checked~.nav-next[for="itp-r15"],
+#itp-r15:checked~.nav-next[for="itp-r16"],
+#itp-r16:checked~.nav-next[for="itp-r17"],
+#itp-r17:checked~.nav-next[for="itp-r18"],
+#itp-r18:checked~.nav-next[for="itp-r19"],
+#itp-r19:checked~.nav-next[for="itp-r20"],
+#itp-r20:checked~.nav-next[for="itp-r21"],
+#itp-r21:checked~.nav-next[for="itp-r22"] {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1198,7 +1219,17 @@ input[type="radio"] {
 #itp-r9:checked~.nav-prev[for="itp-r8"],
 #itp-r10:checked~.nav-prev[for="itp-r9"],
 #itp-r11:checked~.nav-prev[for="itp-r10"],
-#itp-r12:checked~.nav-prev[for="itp-r11"] {
+#itp-r12:checked~.nav-prev[for="itp-r11"],
+#itp-r13:checked~.nav-prev[for="itp-r12"],
+#itp-r14:checked~.nav-prev[for="itp-r13"],
+#itp-r15:checked~.nav-prev[for="itp-r14"],
+#itp-r16:checked~.nav-prev[for="itp-r15"],
+#itp-r17:checked~.nav-prev[for="itp-r16"],
+#itp-r18:checked~.nav-prev[for="itp-r17"],
+#itp-r19:checked~.nav-prev[for="itp-r18"],
+#itp-r20:checked~.nav-prev[for="itp-r19"],
+#itp-r21:checked~.nav-prev[for="itp-r20"],
+#itp-r22:checked~.nav-prev[for="itp-r21"]{
   opacity: 1;
   pointer-events: auto;
 }
@@ -1229,12 +1260,9 @@ input[type="radio"] {
   display: inline-block;
 }
 
-/* CSS: append to styles.css */
 
-/* container and hide native radio buttons */
 .text-slider-wrapper {
   position: relative;
-  width: 100%;
   overflow: hidden;
 }
 
@@ -1242,13 +1270,12 @@ input[type="radio"] {
   display: none;
 }
 
-/* slides flex container */
 .slides-text {
   display: flex;
+  position: relative;
   transition: transform 0.5s ease;
 }
 
-/* individual review card */
 .text-review-card {
   width: 254px;
   flex-shrink: 0;
@@ -2197,7 +2224,6 @@ input[name="attraction-tab"] {
   background: url("img/arrow-right-big.svg") no-repeat center;
 }
 
-/* ---- Show/hide nav buttons for each slide ---- */
 #s-r1:checked~.nav-prev[for="s-r1"],
 #s-r2:checked~.nav-prev[for="s-r2"],
 #s-r3:checked~.nav-prev[for="s-r3"],
