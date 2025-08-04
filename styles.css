@@ -734,8 +734,8 @@ input[type="radio"] {
 }
 
 .itp-benefits__app-img {
-  width: 460.75px;
-  height: auto;
+  width: 504px;
+  height: 490px;
   object-fit: contain;
 }
 
@@ -922,21 +922,32 @@ input[type="radio"] {
   padding: 0 15px;
 }
 
+.text-muted {
+  margin-left: 8px;
+}
+
 .text-start.mb-4 p {
-  color: #6c757d;
+  color: #000;
   font-size: 16px;
 }
 
 .text-start.mb-4 h2 {
   margin: 5px 0;
-  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
   font-weight: 600;
   color: #000;
 }
 
-.text-start.mb-4 h2 img {
-  height: 32px;
+.text-start.mb-4 h2 {
+  height: 38px;
   vertical-align: text-bottom;
+  margin: 0 8px;
+}
+
+.text-start.mb-4 img {
+  width: 49px;
+  height: 44px;
   margin: 0 8px;
 }
 
@@ -2257,18 +2268,15 @@ input[name="attraction-tab"] {
 /* ================================
    SPECIAL OFFERS (Özel Teklifler) TAB
    ================================ */
-/* paneli gizle */
 #content-special {
   display: none;
   margin-top: 2rem;
 }
 
-/* sekme seçildiğinde göster */
 #tab-special:checked~.tab-content #content-special {
   display: block;
 }
 
-/* slider wrapper */
 #content-special .special-slider-wrapper {
   position: relative;
   width: 100%;
@@ -2276,26 +2284,22 @@ input[name="attraction-tab"] {
   padding: 20px 0;
 }
 
-/* gizle radio’lar */
 #content-special .special-slider-wrapper input[type="radio"] {
   display: none;
 }
 
-/* slides container: tam genişlik */
 #content-special .special-slides {
   display: flex;
   width: 100%;
   transition: transform 0.4s ease;
 }
 
-/* her bir liste %25 genişlik */
 #content-special .special-list {
   flex: 0 0 25%;
   box-sizing: border-box;
   padding: 0 20px;
 }
 
-/* radio’ya göre kaydır */
 #content-special #s-r1:checked~.special-slides {
   transform: translateX(0%);
 }
@@ -2316,7 +2320,6 @@ input[name="attraction-tab"] {
   transform: translateX(-100%);
 }
 
-/* liste stilleri */
 #content-special .attraction-list {
   list-style: none;
   margin: 0;
@@ -2454,9 +2457,6 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ===========================
-   ZOOS GRID (Tab: Zoos)
-   =========================== */
 #content-zoos {
   display: none;
 }
@@ -2474,9 +2474,6 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* ================================
-   EXPERIENCES GRID (Tab: Experiences)
-   ================================ */
 #content-Expreriences {
   display: none;
 }
@@ -2494,9 +2491,6 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* =====================================
-   FAMILY FRIENDLY GRID (Tab: Family Friendly)
-   ===================================== */
 #content-family-friendly {
   display: none;
 }
@@ -2514,9 +2508,6 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* ==============================
-   OUTSIDE THE CITY GRID (Tab: Outside)
-   ============================== */
 #content-outside {
   display: none;
 }
@@ -2534,9 +2525,6 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* =============================
-   OUTDOOR ACTIVITIES GRID (Tab: Outdoor)
-   ============================= */
 #content-outdoor {
   display: none;
 }
@@ -2554,9 +2542,6 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* =============================
-   SERVICES & BENEFITS GRID (Tab: Services)
-   ============================= */
 #content-services {
   display: none;
 }
@@ -2574,10 +2559,9 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-
 .itp-subscribe-section {
   width: 100vw;
-  height: 225px;
+  height: 100%;
   position: relative;
   left: 50%;
   right: 50%;
@@ -2585,7 +2569,7 @@ input[name="attraction-tab"] {
   margin-right: -50vw;
   background-color: #F0034E;
   color: #ffffff;
-  padding: 50px 116px;
+  padding: 50px 16px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -3026,11 +3010,6 @@ input[name="attraction-tab"] {
     padding-top: 8px;
   }
 
-  .logo-img {
-    width: 135px;
-    height: 36px;
-  }
-
   .logo-subtitle {
     width: 130px;
     font-size: 7px;
@@ -3193,5 +3172,17 @@ input[name="attraction-tab"] {
   .tab-buttons-container::-webkit-scrollbar,
   .attraction-tabs .tab-buttons-container::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .itp-help-body {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .help-item {
+    width: 100%;
+    
   }
 }
