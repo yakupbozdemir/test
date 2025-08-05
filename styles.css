@@ -3038,7 +3038,7 @@ input[name="attraction-tab"] {
   .itp-hero {
     flex-direction: column;
     height: auto;
-    min-height: 220px;
+    min-height: 280px;
     gap: 10px;
     padding: 0;
   }
@@ -3059,8 +3059,8 @@ input[name="attraction-tab"] {
   }
 
   .hero-img {
-    width: 90vw;
-    height: 200px;
+    width: 100vw;
+    height: auto;
     margin-left: 0;
   }
 
@@ -3183,6 +3183,9 @@ input[name="attraction-tab"] {
 
   .help-item {
     width: 100%;
-    
+  }
+
+  .itp-help-header {
+    padding-left: 16px;
   }
 }
