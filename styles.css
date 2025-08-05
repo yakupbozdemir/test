@@ -442,50 +442,26 @@ input[type="radio"] {
 
 .step-text {
   font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-  color: #fff;
   line-height: 1.4;
 }
 
 .steps-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 0 1 450px;
   min-width: 450px;
 }
 
-.steps-image img {
-  max-height: 370px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  max-width: 450px;
-}
-
 .itp-download-footer {
-  height: 177px;
-  margin-top: 30px;
-  text-align: left;
   max-width: 1440px;
-  margin: 30px auto 0;
-  padding: 0 15px;
+  height: 177px;
 }
 
 .footer-heading {
   font-size: 18px;
-  font-weight: 600;
-  color: #000;
-  margin: 0 0 8px 0;
 }
 
 .footer-text {
   font-size: 14px;
-  font-weight: 400;
   color: #4f4f4f;
-  margin: 0 0 16px 0;
 }
 
 .app-buttons img {
@@ -494,9 +470,7 @@ input[type="radio"] {
 
 .see-details-link {
   font-size: 14px;
-  font-weight: 600;
   color: #F0034E;
-  text-decoration: none;
 }
 
 .see-details-link:hover {
@@ -505,11 +479,9 @@ input[type="radio"] {
 
 .itp-review-section {
   width: 100vw;
-  position: relative;
   left: 50%;
   margin-left: -50vw;
   height: 732px;
-  padding: 60px 0;
   background-color: #F8F8F8;
 }
 
