@@ -10,7 +10,8 @@
         content="Skip-the-Line Instant Access to 100+ Attractions including Guided Tours, Dinner Cruise, Airport Transfers and more...Save over 50% and enjoy!">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/png" href="https://static.istanbultouristpass.com/images/itp/favicon.png?v5.4.5">
+    <link rel="shortcut icon" type="image/png"
+        href="https://static.istanbultouristpass.com/images/itp/favicon.png?v5.4.5">
 </head>
 
 <body>
@@ -18,7 +19,9 @@
     <div class="container-1440">
 
         <header class="itp-header">
-            <div class="header-inner container-fluid">
+            <div class="container-fluid d-flex justify-content-between align-items-center w-100 pt-3"
+                style="height: 92px;">
+
 
                 <div class="d-lg-none d-flex align-items-center justify-content-between w-100 px-3">
 
@@ -41,16 +44,19 @@
 
                 <div class="d-none d-lg-flex justify-content-between align-items-center w-100">
 
-                    <div class="logo-container d-flex flex-column">
+                    <div class="d-flex flex-column align-items-center">
                         <a href="#" class="navbar-brand mb-1">
-                            <img src="img/itp-logo.svg" class="logo-img" style="width: 193px; height: 50px;" alt="Istanbul Tourist Pass Logo" />
+                            <img src="img/itp-logo.svg" style="width: 193px; height: 50px; object-fit: contain;"
+                                alt="Istanbul Tourist Pass Logo" />
                         </a>
-                        <a href="#" class="logo-subtitle text-muted small">Cityberry Tourism is a member of TURSAB 11745</a>
+                        <a href="#" class="text-decoration-none mt-2 text-center"
+                            style="font-size: 8px; color: #8E8E8E; width: 190px;">Cityberry Tourism is a member of
+                            TURSAB 11745</a>
                     </div>
 
                     <div class="itp-nav-container d-flex flex-column align-items-end">
 
-                        <div class="top-bar mb-2">
+                        <div class="top-bar d-flex justify-content-end align-items-center mb-1">
                             <a href="https://istanbultouristpass.com/become-affiliate-partner">Become a Partner</a>
                             <a href="https://istanbultouristpass.com/free-digital-istanbul-guidebook">Tips & Guides</a>
                             <a href="https://istanbultouristpass.com/frequently-asked-questions">FAQs</a>
@@ -58,8 +64,8 @@
                             <a href="https://myistanbul.istanbultouristpass.com/">Manage Your Pass</a>
 
                             <div class="dropdown d-inline-block">
-                                <a class="dropdown-toggle lang-dropdown" href="#" data-bs-toggle="dropdown">
-                                    <img src="https://flagcdn.com/16x12/gb.png" alt="UK Flag"> EN
+                                <a class="d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+                                    <img src="https://flagcdn.com/16x12/gb.png" class="me-1" alt="UK Flag"> EN
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li><a class="dropdown-item d-flex align-items-center"
@@ -140,11 +146,12 @@
                                 </ul>
                             </div>
 
-                            <a href="https://istanbultouristpass.com/istanbul-pass" class="btn buy-now-btn">Buy Now</a>
+                            <a href="https://istanbultouristpass.com/istanbul-pass"
+                                class="buy-now-btn border-0 py-2 px-3 text-white">Buy Now</a>
                         </div>
 
-                        <nav class="navbar navbar-expand">
-                            <ul class="navbar-nav">
+                        <nav class="d-flex justify-content-end p-0">
+                            <ul class="navbar-nav d-flex flex-row list-unstyled m-0 p-0" style="gap: 20px;">
                                 <li class="nav-item"><a class="nav-link"
                                         href="https://istanbultouristpass.com/what-you-get">What You Get</a></li>
                                 <li class="nav-item"><a class="nav-link"
@@ -270,24 +277,35 @@
             </div>
         </div>
 
-        <div class="itp-banner-bar">
-            <p>Starting from just €139</p>
+        <div class="itp-banner-bar d-flex justify-content-center align-items-center text-center"
+            style="background-color: #F0034E; height: 40px;">
+            <p class="fw-bold text-white m-0" style="font-size: 18px; line-height: 1;">Starting from just €139</p>
         </div>
 
-        <section class="itp-hero">
-            <div class="hero-left">
-                <p class="tagline">All Istanbul.</p>
-                <h2 class="subheading">All Yours!</h2>
-                <p><strong>ALL Istanbul’s magic in ONE pass!</strong></p>
-                <p><span class="highlight">FREE, FAST & EASY</span> entry to Istanbul’s top <strong>7</strong> iconic
+        <section
+            class="itp-hero d-flex justify-content-center align-items-center flex-nowrap gap-0 overflow-hidden p-0 position-relative"
+            style="height: 450px; z-index: 1; background: linear-gradient(to right, #d4f0fc, #ffffff);">
+            <div class="hero-left flex-shrink-0" style="width: 442px; height: 379px; padding-left: 30px;">
+                <p class="fw-bold mb-2" style="font-size: 60px; color: #F0034E; font-family: 'Poppins', sans-serif;">All
+                    Istanbul.</p>
+                <h2 class="mb-3" style="font-size: 28px; color: #0ea5e9;">All Yours!</h2>
+                <p class="fs-6" style="color: #1f2937; margin-bottom: 10px;"><strong>ALL Istanbul’s magic in ONE
+                        pass!</strong></p>
+                <p class="fs-6" style="color: #1f2937; margin-bottom: 10px;"><span class="highlight">FREE, FAST &
+                        EASY</span> entry to Istanbul’s top <strong>7</strong> iconic
                     landmarks and <strong>100+</strong> popular museums, attractions and activities with skip the line
                     instant <strong>e-tickets</strong>.</p>
-                <p>Explore Istanbul hassle-free and save over <strong>€270</strong>.</p>
-                <p><span class="highlight">NOW!</span> FREE entry to Hagia Sophia & Galata Tower!</p>
-                <a href="https://istanbultouristpass.com/istanbul-pass" class="hero-btn">Get Yours & Save Now</a>
+                <p class="fs-6" style="color: #1f2937; margin-bottom: 10px;">Explore Istanbul hassle-free and save over
+                    <strong>€270</strong>.
+                </p>
+                <p class="fs-6" style="color: #1f2937; margin-bottom: 10px;"><span class="highlight">NOW!</span> FREE
+                    entry to Hagia Sophia & Galata Tower!</p>
+                <a href="https://istanbultouristpass.com/istanbul-pass"
+                    class="hero-btn text-white text-decoration-none fw-bold text-center mt-2">Get
+                    Yours & Save Now</a>
             </div>
 
-            <div class="hero-right">
+            <div class="hero-right d-flex justify-content-end align-items-center flex-shrink-0" style="height: 100%;">
 
                 <div class="diamond d1">
                     <div class="diamond-content">
@@ -313,110 +331,133 @@
                     </div>
                 </div>
 
-                <img src="img/banner-2.webp" alt="Istanbul view" class="hero-img">
+                <img src="img/banner-2.webp" alt="Istanbul view" class="object-fit-cover"
+                    style="width: 890px; height: 450px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); margin-left: 180px;">
             </div>
         </section>
 
-        <div class="itp-stats">
-            <div class="stats">
-                <div class="stats-item">
-                    <p class="large-text">30 Years</p>
-                    <p class="small-text">Istanbul experts</p>
+        <div class="itp-stats d-flex justify-content-center align-items-center"
+            style="background-color: #F8F8F8; padding: 29px 28px 35px 28px;">
+            <div class="stats d-flex justify-content-start align-items-center flex-wrap w-100"
+                style="max-width: 1440px;">
+                <div class="d-flex flex-column justify-content-center align-items-start text-start"
+                    style="width: 276px; height: 63px; margin: 10px;">
+                    <p class="fw-semibold" style="font-size: 26px; color: #4f4f4f; margin-bottom: 4px;">30 Years</p>
+                    <p class="fw-medium fs-6 m-0" style="color: #4f4f4f;">Istanbul experts</p>
                 </div>
-                <div class="stats-item">
-                    <p class="large-text">750K+ Passes</p>
-                    <p class="small-text">Sold since 2015</p>
+                <div class="d-flex flex-column justify-content-center align-items-start text-start"
+                    style="width: 276px; height: 63px; margin: 10px;">
+                    <p class="fw-semibold" style="font-size: 26px; color: #4f4f4f; margin-bottom: 4px;">750K+ Passes</p>
+                    <p class="fw-medium fs-6 m-0" style="color: #4f4f4f;">Sold since 2015</p>
                 </div>
-                <div class="stats-item">
-                    <p class="large-text">150+ Countries</p>
-                    <p class="small-text">Nationalities served</p>
+                <div class="d-flex flex-column justify-content-center align-items-start text-start"
+                    style="width: 276px; height: 63px; margin: 10px;">
+                    <p class="fw-semibold" style="font-size: 26px; color: #4f4f4f; margin-bottom: 4px;">150+ Countries
+                    </p>
+                    <p class="fw-medium fs-6 m-0" style="color: #4f4f4f;">Nationalities served</p>
                 </div>
-                <div class="stats-item">
-                    <p class="large-text">98.6% Happy</p>
-                    <p class="small-text">Customers recommend</p>
+                <div class="d-flex flex-column justify-content-center align-items-start text-start"
+                    style="width: 276px; height: 63px; margin: 10px;">
+                    <p class="fw-semibold" style="font-size: 26px; color: #4f4f4f; margin-bottom: 4px;">98.6% Happy</p>
+                    <p class="fw-medium fs-6 m-0" style="color: #4f4f4f;">Customers recommend</p>
                 </div>
-                <div class="stats-item">
-                    <p class="large-text">€75M+ Savings</p>
-                    <p class="small-text">Millions saved</p>
+                <div class="d-flex flex-column justify-content-center align-items-start text-start"
+                    style="width: 276px; height: 63px; margin: 10px;">
+                    <p class="fw-semibold" style="font-size: 26px; color: #4f4f4f; margin-bottom: 4px;">€75M+ Savings
+                    </p>
+                    <p class="fw-medium fs-6 m-0" style="color: #4f4f4f;">Millions saved</p>
                 </div>
             </div>
         </div>
 
-        <section class="itp-benefits">
-            <div class="itp-benefits__header container-fluid">
-                <p class="itp-benefits__title">Why choose Istanbul Tourist Pass?</p>
-                <p class="itp-benefits__subtitle">
+        <section class="bg-white" style="padding-top: 40px; padding-bottom: 40px; padding-right: 28.8px;">
+            <div class="container-fluid d-flex flex-column justify-content-center text-start ps-0"
+                style="margin-bottom: 20px;">
+                <p class="fw-normal fs-5 mb-2" style="color: #4F4F4F;">Why choose Istanbul Tourist Pass?</p>
+                <p class="fw-semibold fs-2 m-0 text-dark" style="font-size: 38px;">
                     One pass for a hassle-free ultimate Istanbul sightseeing!
                 </p>
             </div>
 
-            <div class="itp-benefits__content container-fluid d-flex">
-                <div class="itp-benefits__list row gx-4 gy-4 flex-grow-1">
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+            <div class="container-fluid d-flex align-items-start ps-0">
+                <div class="row gx-4 gy-4 flex-grow-1 m-0 p-0">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/museum.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Instant Access to 100+ Attractions</h4>
-                            <p class="itp-benefits__card-text">Visit top museums, attractions, tours, cruises, and more
+                            <p class="itp-benefits__card-text m-0">Visit top museums, attractions, tours, cruises, and
+                                more
                                 with your pass.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/ticket.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Skip Ticket Lines & Save Time</h4>
-                            <p class="itp-benefits__card-text">Skip lines at select attractions and save time with
+                            <p class="itp-benefits__card-text m-0">Skip lines at select attractions and save time with
                                 e-tickets.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/her.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Turkish Hospitality at Its Best</h4>
-                            <p class="itp-benefits__card-text">Feel secure and guided with an Istanbul Expert's help and
+                            <p class="itp-benefits__card-text m-0">Feel secure and guided with an Istanbul Expert's help
+                                and
                                 support.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/save-money.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Save Money... Guaranteed!</h4>
-                            <p class="itp-benefits__card-text">Save over 50% with expertly optimized credit points and
+                            <p class="itp-benefits__card-text m-0">Save over 50% with expertly optimized credit points
+                                and
                                 enjoy more of Istanbul for less.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/manage.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Manage Your Trip via App</h4>
-                            <p class="itp-benefits__card-text">Plan and manage your trip with our easy-to-use
+                            <p class="itp-benefits__card-text m-0">Plan and manage your trip with our easy-to-use
                                 multilingual app.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/planet.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Help Save our Planet</h4>
-                            <p class="itp-benefits__card-text">No print! Eco-friendly Show&Go® instant ticketing
+                            <p class="itp-benefits__card-text m-0">No print! Eco-friendly Show&Go® instant ticketing
                                 technology.</p>
                         </div>
                     </div>
 
-                    <div class="itp-benefits__item col-12 col-md-6 col-lg-3">
-                        <div class="itp-benefits__card text-right">
+                    <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
+                        <div class="bg-white border-0 d-flex flex-column align-items-end text-right"
+                            style="width: 230px; height: 231px;">
                             <img src="img/guard.svg" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Flexible & Reliable Travel</h4>
-                            <p class="itp-benefits__card-text">Valid for one year from the purchase date. Cancel
+                            <p class="itp-benefits__card-text m-0">Valid for one year from the purchase date. Cancel
                                 anytime!</p>
                         </div>
                     </div>
 
                     <div class="itp-benefits-button">
-                        <a href="https://istanbultouristpass.com/istanbul-pass" class="btn buy-save-btn">Buy & Save
+                        <a href="https://istanbultouristpass.com/istanbul-pass"
+                            class="buy-save-btn d-flex align-items-center justify-content-center fw-semibold fs-6 text-white text-decoration-none">Buy
+                            & Save
                             Now</a>
                     </div>
                 </div>
@@ -431,12 +472,14 @@
 
         <section class="itp-slider">
 
-            <div class="slider-header">
-                <p>Get free access to over 100 attractions</p>
-                <h2>Enjoy Istanbul’s most popular attractions & activities:</h2>
+            <div class="text-start mx-auto" style="max-width: 1440px; padding: 0 15px 30px; margin-bottom: 30px;">
+                <p class="fw-medium" style="font-size: 20px; color: #4F4F4F;">Get free access to over 100 attractions
+                </p>
+                <h2 class="fw-bold text-dark m-0" style="font-size: 38px;">Enjoy Istanbul’s most popular attractions &
+                    activities:</h2>
             </div>
 
-            <div class="slider-outer">
+            <div class="slider-outer position-relative mx-auto overflow-visible" style="z-index: 2;">
 
                 <input type="radio" name="slider" id="itp-s1" checked />
                 <input type="radio" name="slider" id="itp-s2" />
@@ -446,174 +489,244 @@
                 <input type="radio" name="slider" id="itp-s6" />
                 <input type="radio" name="slider" id="itp-s7" />
 
-                <div class="card-slider slides">
-                    <div class="card">
-                        <div class="card-image">
+                <div class="card-slider slides d-flex">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="video/hagia-sophia.mp4"
                                 poster="img/hagia-sophia-skip-the-ticket-line-entry-with-audio-guide265513.png"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Hagia Sophia Skip-the-Ticket-Line Entry with Audio Guide</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Hagia
+                                Sophia Skip-the-Ticket-Line Entry with Audio Guide</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€35 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="video/galata-tower.mp4"
                                 poster="img/galata-tower-skip-the-ticket-line-entry-with-audio-guide919224.png"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Galata Tower Skip-the-Ticket-Line Hosted Entry with Audio Guide</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Galata
+                                Tower Skip-the-Ticket-Line Hosted Entry with Audio Guide</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€40 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="video/topkapi-palace.mp4"
                                 poster="img/topkapi-palace-museum-guided-tour-with-harem-including-entry-tickets399922.png"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Topkapi Palace Museum Guided Tour with Harem Including Entry Tickets</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Topkapi
+                                Palace Museum Guided Tour with Harem Including Entry Tickets</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€65 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="video/basillica.mp4"
                                 poster="img/basilica-cistern-skip-the-ticket-line-entry-with-audio-guide1835.png"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" class="hover-img" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Basilica Cistern Skip-the-Ticket-Line Entry with Audio Guide</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Basilica
+                                Cistern Skip-the-Ticket-Line Entry with Audio Guide</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€39 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="video/dolmabahce-palace.mp4"
                                 poster="img/dolmabahce-palace-museum-skip-the-ticket-line-entry-with-audio-guide167386.png"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Dolmabahce Palace Museum Skip-the-Ticket-Line Entry with Audio Guide</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Dolmabahce
+                                Palace Museum Skip-the-Ticket-Line Entry with Audio Guide</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€46 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="img/blue-mosque-skip-the-ticket-line-entry-with-audio-guide154565"
                                 poster="img/blue-mosque-skip-the-ticket-line-entry-with-audio-guide154565.webp"></video>
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Blue Mosque, Hagia Sophia & Sultanahmet Square Istanbul Old City Walking
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Blue
+                                Mosque, Hagia Sophia & Sultanahmet Square Istanbul Old City Walking
                                 Tour
                             </h3>
-                            <div class="prices">
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€25 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="https://static.istanbultouristpass.com/videos/265.mp4?v5.4.5"
                                 poster="img/yildiz-palace-skip-the-ticket-line-entry-with-audio-guide154565.webp"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                             <img src="img/new-version-badge.png" alt="Top Free Badge" />
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Yildiz Palace Skip-the-Ticket-Line Entry with Audio Guide</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Yildiz
+                                Palace Skip-the-Ticket-Line Entry with Audio Guide</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€46 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
 
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Legends of Istanbul Live Show</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Legends of
+                                Istanbul Live Show</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€46 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="https://static.istanbultouristpass.com/videos/231.mp4?v5.4.5"
                                 poster="img/le-vapeur-magique-morning-turkish-breakfast-cruise564082.webp"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Le Vapeur Magique - Morning Turkish Breakfast Cruise</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Le Vapeur
+                                Magique - Morning Turkish Breakfast Cruise</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€46 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
+                    <div class="custom-card d-flex flex-column border-0 rounded-3 bg-light cursor-pointer overflow-hidden user-select-none"
+                        style="flex: 0 0 244px; max-width: 244px;">
+                        <div class="card-image position-relative overflow-hidden rounded-3 flex-shrink-0"
+                            style="width: 244px; height: 370px;">
                             <video src="https://static.istanbultouristpass.com/videos/253.mp4?v5.4.5"
                                 poster="img/whirling-dervishes-show-at-abud-efendi-mansion-entry-ticket286980.webp"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
                                 muted loop preload="metadata"></video>
                         </div>
-                        <div class="card-body">
-                            <p class="category">HISTORICAL LANDMARKS</p>
-                            <h3 class="title">Whirling Dervishes Show at Abud Efendi Mansion Entry Ticket</h3>
-                            <div class="prices">
+                        <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
+                            style="padding: 12px 0;">
+                            <p class="fw-semibold text-uppercase"
+                                style="font-size: 12px; color: #666; margin-bottom: 6px;">
+                                HISTORICAL LANDMARKS</p>
+                            <h3 class="title fw-semibold flex-grow-1"
+                                style="font-size: 15px; color: #111; margin-bottom: 10px; line-height: 1.4;">Whirling
+                                Dervishes Show at Abud Efendi Mansion Entry Ticket</h3>
+                            <div class="d-flex flex-column" style="gap: 4px;">
                                 <p class="old-price">€46 <span>without pass</span></p>
                                 <p class="new-price">Included <span>with pass</span></p>
                             </div>
@@ -638,13 +751,14 @@
 
         </section>
 
-        <section class="itp-download-section">
-            <div class="itp-download-header">
-                <p class="download-subtitle">How does Istanbul Tourist Pass® work?</p>
-                <h2 class="download-title">Simple, Fast, and Hassle-Free!</h2>
+        <section class="bg-white" style="height: 674px;">
+            <div class="text-start px-3 mx-auto" style="max-width: 1440px; height: 92px; margin-bottom: 20px;">
+                <p class="fw-normal mb-2" style="font-size: 20px; color: #4f4f4f;">How does Istanbul Tourist Pass® work?
+                </p>
+                <h2 class="fw-bold text-dark m-0" style="font-size: 38px;">Simple, Fast, and Hassle-Free!</h2>
             </div>
 
-            <div class="itp-download-steps">
+            <div class="itp-download-steps d-flex justify-content-center align-items-center gap-3">
                 <div class="container d-flex justify-content-center align-items-center gap-4">
                     <div class="steps-content d-flex flex-grow-1 flex-wrap justify-content-center">
                         <div class="step-item">
@@ -1316,7 +1430,8 @@
                             most common questions. If you can't find what you're looking for,
                             feel free to get in touch!
                         </p>
-                        <a href="https://istanbultouristpass.com/frequently-asked-questions" class="help-item-link">Find out more</a>
+                        <a href="https://istanbultouristpass.com/frequently-asked-questions" class="help-item-link">Find
+                            out more</a>
                     </div>
 
                     <div class="help-item col-lg-6 col-md-12">
@@ -1371,7 +1486,7 @@
                     <input type="radio" name="attraction-tab" id="tab-outdoor" class="d-none">
                     <input type="radio" name="attraction-tab" id="tab-services" class="d-none">
 
-                    <div class="tab-buttons-container">
+                    <div class="tab-buttons-container d-flex position-relative overflow-auto">
 
                         <input type="radio" name="tab" id="itp-tb1" checked />
                         <input type="radio" name="tab" id="itp-tb2" />
@@ -2515,134 +2630,187 @@
 
         <footer class="site-footer">
 
-            <div class="footer-top">
+            <div class="footer-top ">
                 <div class="container">
                     <div class="row footer-main">
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-col">
-                            <h4>SUPPORT</h4>
-                            <span class="footer-title-divider"></span>
-                            <ul class="support-list">
-                                <li>
-                                    <p>Text us via WhatsApp:</p>
-                                    <a href="https://wa.me/905303852026">+90 530 385 20 26</a>
-                                </li>
-                                <li>
-                                    <p>Message us via Messenger:</p>
-                                    <a href="https://m.me/istanbultouristpass">m.me/istanbultouristpass</a>
-                                </li>
-                                <li>
-                                    <p>Start Chat:</p>
-                                    <a href="https://istanbultouristpass.com/#">Ask a Question</a>
-                                </li>
-                                <li>
-                                    <p>Call Us:</p>
-                                    <a href="tel:+908503048726">+90 850 304 8726</a>
-                                </li>
-                                <li>
-                                    <p>E-mail Us:</p>
-                                    <a href="mailto:contact@istanbultouristpass.com">contact@istanbultouristpass.com</a>
-                                </li>
-                            </ul>
-                        </div>
+     <!-- FOOTER | DESKTOP & MOBILE VERSIYONLARI -->
 
-                        <div class="col-lg-2 col-md-6 col-sm-12 footer-col">
-                            <h4>ISTANBUL TOURIST PASS®</h4>
-                            <span class="footer-title-divider"></span>
-                            <ul>
-                                <li><a href="https://istanbultouristpass.com/about-us">Our Story</a></li>
-                                <li><a href="https://istanbultouristpass.com/what-you-get">What You Get</a></li>
-                                <li><a href="https://istanbultouristpass.com/how-it-works">How It Works</a></li>
-                                <li><a href="https://istanbultouristpass.com/plan-and-save">Plan & Save</a></li>
-                                <li><a href="https://istanbultouristpass.com/whats-included">All Attractions</a></li>
-                                <li><a href="https://istanbultouristpass.com/istanbul-pass">Passes & Prices</a></li>
-                                <li><a href="https://istanbultouristpass.com/frequently-asked-questions">FAQs</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-col">
-                            <h4>USEFUL LINKS</h4>
-                            <span class="footer-title-divider"></span>
-                            <ul>
-                                <li><a href="https://istanbultouristpass.com/groups">Group Request</a></li>
-                                <li><a href="https://istanbultouristpass.com/blog">Blog</a></li>
-                                <li><a href="https://istanbultouristpass.com/free-digital-istanbul-guidebook">Tips &
-                                        Guides</a></li>
-                                <li><a
-                                        href="https://istanbultouristpass.com/blog/istanbul-tourist-pass/istanbul-museum-pass">Istanbul
-                                        Museum Pass</a></li>
-                                <li><a
-                                        href="https://istanbultouristpass.com/blog/istanbul-tourist-pass/istanbul-public-transportation-card">Istanbul
-                                        Public Transportation</a></li>
-                                <li><a href="https://istanbultouristpass.com/istanbul-transportation-card">Istanbul
-                                        Transportation Card</a></li>
-                                <li><a
-                                        href="https://istanbultouristpass.com/blog/istanbul-tourist-pass/things-todo-in-istanbul">Things
-                                        To Do in Istanbul</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-col">
-                            <div>
-                                <h4>PARTNERS</h4>
+                        <!-- DESKTOP FOOTER -->
+                    <div class="footer-top d-none d-md-block bg-light pt-5 pb-4" style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #333;">
+                        <div class="container">
+                            <div class="row footer-main">
+                            <!-- SUPPORT -->
+                            <div class="col-lg-3 col-md-6 footer-col">
+                                <h4 class="fw-bold text-dark">SUPPORT</h4>
                                 <span class="footer-title-divider"></span>
-                                <ul>
-                                    <li><a href="https://istanbultouristpass.com/reseller">Become a Reseller</a></li>
-                                    <li><a href="https://istanbultouristpass.com/become-affiliate-partner">Affiliate
-                                            Partners</a></li>
-                                    <li><a href="https://istanbultouristpass.com/creators-influencers">Creators &
-                                            Influencers</a></li>
+                                <ul class="list-unstyled">
+                                <li class="mb-2">Text us via WhatsApp:<br><a href="https://wa.me/905303852026" class="fw-bold text-dark">+90 530 385 20 26</a></li>
+                                <li class="mb-2">Message us via Messenger:<br><a href="https://m.me/istanbultouristpass" class="fw-bold text-dark">m.me/istanbultouristpass</a></li>
+                                <li class="mb-2">Start Chat:<br><a href="#" class="fw-bold text-dark">Ask a Question</a></li>
+                                <li class="mb-2">Call Us:<br><a href="tel:+908503048726" class="fw-bold text-dark">+90 850 304 8726</a></li>
+                                <li>E-mail Us:<br><a href="mailto:contact@istanbultouristpass.com" class="fw-bold text-dark">contact@istanbultouristpass.com</a></li>
                                 </ul>
                             </div>
-                            <div class="">
-                                <h4>OUR SISTER BRANDS</h4>
+
+                            <!-- ITP LINKS -->
+                            <div class="col-lg-2 col-md-6 footer-col">
+                                <h4 class="fw-bold text-dark">ISTANBUL TOURIST PASS®</h4>
                                 <span class="footer-title-divider"></span>
-                                <div class="sister-brands">
-                                    <a href="https://cappadociatravelpass.com/"><img src="img/cappadocia-pass.svg"
-                                            alt="Cappadocia Travel Pass"></a>
-                                    <a href="https://istanbul.com/"><img src="img/istanbulcom.svg"
-                                            alt="istanbul.com"></a>
+                                <ul class="list-unstyled">
+                                <li><a href="#" class="text-dark text-decoration-none">Our Story</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">What You Get</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">How It Works</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Plan & Save</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">All Attractions</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Passes & Prices</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">FAQs</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- USEFUL LINKS -->
+                            <div class="col-lg-2 col-md-6 footer-col">
+                                <h4 class="fw-bold text-dark">USEFUL LINKS</h4>
+                                <span class="footer-title-divider"></span>
+                                <ul class="list-unstyled">
+                                <li><a href="#" class="text-dark text-decoration-none">Group Request</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Tips & Guides</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Museum Pass</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Public Transport Card</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Transportation Info</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Things to Do</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- PARTNERS & BRANDS -->
+                            <div class="col-lg-2 col-md-6 footer-col">
+                                <h4 class="fw-bold text-dark">PARTNERS</h4>
+                                <span class="footer-title-divider"></span>
+                                <ul class="list-unstyled">
+                                <li><a href="#" class="text-dark text-decoration-none">Become a Reseller</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Affiliate Partners</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Creators & Influencers</a></li>
+                                </ul>
+                                <h4 class="fw-bold mt-4 text-dark">OUR SISTER BRANDS</h4>
+                                <span class="footer-title-divider"></span>
+                                <div class="d-flex gap-2">
+                                <a href="https://cappadociatravelpass.com/"><img src="img/cappadocia-pass.svg" alt="Cappadocia" height="32"></a>
+                                <a href="https://istanbul.com/"><img src="img/istanbulcom.svg" alt="istanbul.com" height="24"></a>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-col">
-
-                            <div class="mb-4">
-                                <h4>MANAGE YOUR PASS</h4>
+                            <!-- MANAGE & SOCIAL -->
+                            <div class="col-lg-3 col-md-6 footer-col">
+                                <h4 class="fw-bold text-dark">MANAGE YOUR PASS</h4>
                                 <span class="footer-title-divider"></span>
-                                <a href="https://myistanbul.istanbultouristpass.com/" class="btn btn-manage-pass">
-                                    <img src="img/pass-icon.svg" alt="" style="width: 20px; margin-right: 8px;">
-                                    Manage Your Pass
+                                <a href="https://myistanbul.istanbultouristpass.com/" class="btn btn-manage-pass text-white fw-semibold mt-2" style="background-color:#ed1c64; border-radius:6px;">
+                                <img src="img/pass-icon.svg" alt="" style="width: 20px; margin-right: 8px; vertical-align: text-bottom;">
+                                Manage Your Pass
                                 </a>
-                            </div>
 
-                            <div>
-                                <h4>GET ISTANBUL TOURIST PASS® APP</h4>
+                                <h4 class="fw-bold mt-4 text-dark">GET ISTANBUL TOURIST PASS® APP</h4>
                                 <span class="footer-title-divider"></span>
-                                <div class="app-stores">
-                                    <a href="https://apps.apple.com/tr/app/istanbul-tourist-pass/id6535683117"><img
-                                            src="img/app-store-gray.svg" alt="Download on the App Store"></a>
-                                    <a
-                                        href="https://play.google.com/store/apps/details?id=com.istanbultouristpass.app&hl=en&gl=US"><img
-                                            src="img/play-store-gray.svg" alt="Get it on Google Play"></a>
+                                <div class="d-flex gap-2 mt-2">
+                                <a href="#"><img src="img/app-store-gray.svg" alt="App Store" height="40"></a>
+                                <a href="#"><img src="img/play-store-gray.svg" alt="Google Play" height="40"></a>
+                                </div>
+
+                                <h4 class="fw-bold mt-4 text-dark">STAY CONNECTED</h4>
+                                <span class="footer-title-divider"></span>
+                                <div class="d-flex gap-3 mt-2">
+                                <a href="#"><img src="img/instagram.svg" alt="Instagram" height="24"></a>
+                                <a href="#"><img src="img/facebook.svg" alt="Facebook" height="24"></a>
+                                <a href="#"><img src="img/youtube.svg" alt="YouTube" height="24"></a>
                                 </div>
                             </div>
-
-                            <div>
-                                <h4>STAY CONNECTED</h4>
-                                <span class="footer-title-divider"></span>
-                                <div class="social-icons">
-                                    <a href="https://www.instagram.com/istanbultouristpass/"><img
-                                            src="img/instagram.svg" alt="Instagram"></a>
-                                    <a href="https://www.facebook.com/istanbultouristpass"><img src="img/facebook.svg"
-                                            alt="Facebook"></a>
-                                    <a href="https://www.youtube.com/channel/UCkeqMkzZ2m8v4YuVcmA1W4A"><img
-                                            src="img/youtube.svg" alt="YouTube"></a>
-                                </div>
                             </div>
-
                         </div>
-                    </div>
+                        </div>
+
+                        <!-- MOBILE FOOTER ACCORDION -->
+                        <div class="footer-mobile d-block d-md-none bg-white px-3 pt-4 pb-5" style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #333;">
+                        <div class="mb-4">
+                            <h6 class="text-uppercase fw-bold" style="font-size: 12px; color: #000;">Manage Your Pass</h6>
+                            <a href="https://myistanbul.istanbultouristpass.com/" class="btn w-100 fw-semibold text-white" style="background-color: #ed1c64; border-radius: 6px; font-size: 14px;">
+                            <img src="img/pass-icon.svg" alt="" style="width: 18px; margin-right: 6px; vertical-align: text-bottom;">
+                            Manage Your Pass
+                            </a>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="text-uppercase fw-bold" style="font-size: 12px; color: #000;">Get Istanbul Tourist Pass® App</h6>
+                            <div class="d-flex gap-2">
+                            <a href="#"><img src="img/app-store-gray.svg" alt="App Store" height="40"></a>
+                            <a href="#"><img src="img/play-store-gray.svg" alt="Google Play" height="40"></a>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Sections -->
+                        <details class="mb-3">
+                            <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px; color: #000;">Support</summary>
+                            <ul class="list-unstyled pt-2 ps-1">
+                            <li class="mb-2"><span style="color:#4f4f4f">Text us via WhatsApp:</span><br><a href="https://wa.me/905303852026" class="fw-bold text-dark text-decoration-none">+90 530 385 20 26</a></li>
+                            <li class="mb-2"><span style="color:#4f4f4f">Message us via Messenger:</span><br><a href="https://m.me/istanbultouristpass" class="fw-bold text-dark text-decoration-none">m.me/istanbultouristpass</a></li>
+                            <li class="mb-2"><span style="color:#4f4f4f">Start Chat:</span><br><a href="#" class="fw-bold text-dark text-decoration-none">Ask a Question</a></li>
+                            <li class="mb-2"><span style="color:#4f4f4f">Call Us:</span><br><a href="tel:+908503048726" class="fw-bold text-dark text-decoration-none">+90 850 304 8726</a></li>
+                            <li><span style="color:#4f4f4f">E-mail Us:</span><br><a href="mailto:contact@istanbultouristpass.com" class="fw-bold text-dark text-decoration-none">contact@istanbultouristpass.com</a></li>
+                            </ul>
+                        </details>
+
+                        <details class="mb-3">
+                        <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px;">Istanbul Tourist Pass®</summary>
+                        <ul class="list-unstyled pt-2 ps-1">
+                            <li><a href="#" class="text-dark text-decoration-none">Our Story</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">What You Get</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">How It Works</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Plan & Save</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">All Attractions</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Passes & Prices</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">FAQs</a></li>
+                        </ul>
+                        </details>
+
+                        <details class="mb-3">
+                        <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px;">Useful Links</summary>
+                        <ul class="list-unstyled pt-2 ps-1">
+                            <li><a href="#" class="text-dark text-decoration-none">Group Request</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Tips & Guides</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Museum Pass</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Public Transport</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Transport Card</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Things to Do</a></li>
+                        </ul>
+                        </details>
+
+                        <details class="mb-3">
+                        <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px;">Partners</summary>
+                        <ul class="list-unstyled pt-2 ps-1">
+                            <li><a href="#" class="text-dark text-decoration-none">Become a Reseller</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Affiliate Partners</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Creators & Influencers</a></li>
+                        </ul>
+                        </details>
+
+                        <details class="mb-3">
+                        <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px;">Our Sister Brands</summary>
+                        <div class="d-flex align-items-center gap-3 pt-2">
+                            <a href="https://cappadociatravelpass.com/"><img src="img/cappadocia-pass.svg" alt="Cappadocia Travel Pass" height="32"></a>
+                            <a href="https://istanbul.com/"><img src="img/istanbulcom.svg" alt="istanbul.com" height="24"></a>
+                        </div>
+                        </details>
+
+                        <details class="mb-3">
+                            <summary class="fw-bold text-uppercase border-bottom pb-2" style="font-size: 13px; color: #000;">Stay Connected</summary>
+                            <div class="d-flex align-items-center gap-3 pt-2">
+                            <a href="#"><img src="img/instagram.svg" alt="Instagram" height="24"></a>
+                            <a href="#"><img src="img/facebook.svg" alt="Facebook" height="24"></a>
+                            <a href="#"><img src="img/youtube.svg" alt="YouTube" height="24"></a>
+                            </div>
+                        </details>
+                        </div>
+
+         </div>
                 </div>
             </div>
 
@@ -2690,8 +2858,10 @@
 
         </footer>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
 </body>
 
