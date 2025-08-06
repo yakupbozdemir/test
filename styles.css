@@ -786,20 +786,12 @@ input[type="radio"] {
 }
 
 .btn-actions {
-  text-align: center;
   margin-top: 30px;
 }
 
-.btn-actions .btn-watch-all,
-.btn-actions .btn-read-all {
-  display: none;
-  margin: 0 auto;
+.btn-custom {
   background: #F0034E;
-  color: #fff;
-  font-weight: 600;
   padding: 12px 30px;
-  border-radius: 8px;
-  text-decoration: none;
   transition: background 0.3s;
 }
 
@@ -810,7 +802,6 @@ input[type="radio"] {
 .review-tabs-wrapper input#tab-text-reviews:checked~.btn-actions .btn-read-all {
   display: inline-block;
 }
-
 
 .text-slider-wrapper {
   position: relative;
