@@ -820,29 +820,20 @@ input[type="radio"] {
 }
 
 .text-review-card .review-text {
-  flex-grow: 1;
-  color: #000;
   font-family: poppins, sans-serif;
   font-size: 17px;
-  font-weight: 300;
   line-height: 1.4;
   margin-bottom: 12px;
 }
 
 .text-review-card .read-more {
-  font-size: 16px;
   color: #0ea5e9;
-  text-decoration: none;
-  margin-bottom: 8px;
 }
 
 .text-review-card .author {
-  font-size: 14px;
   color: #555;
-  text-align: left;
 }
 
-/* slide positioning based on which radio is checked */
 #text-slide1:checked~.slides-text {
   transform: translateX(0);
 }
@@ -881,9 +872,7 @@ input[type="radio"] {
 
 .itp-about-section {
   height: 372px;
-  background-color: #fff;
-  padding: 0 28px 50px 0px;
-  box-sizing: border-box;
+  padding: 0 28px 50px 0;
   font-family: 'Poppins', sans-serif;
 }
 
