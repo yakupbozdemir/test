@@ -1940,15 +1940,11 @@ input[name="attraction-tab"] {
   font-family: 'Poppins', sans-serif;
 }
 
-.itp-subscribe-section .text-content h2 {
+.subscribe-heading {
   font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
-.itp-subscribe-section .text-content p {
-  font-size: 16px;
-  font-weight: 300;
+.subscribe-text {
   line-height: 1.6;
 }
 
@@ -1956,12 +1952,9 @@ input[name="attraction-tab"] {
   height: 55px;
 }
 
-.subscribe-form .form-control {
-  border: none;
+.subscribe-input {
   padding: 15px;
-  font-size: 16px;
   border-radius: 8px !important;
-  flex-grow: 1;
   height: 55px;
 }
 
@@ -1969,13 +1962,9 @@ input[name="attraction-tab"] {
   color: #999;
 }
 
-.subscribe-form .btn-subscribe {
+.btn-subscribe {
   background-color: #3EB0DE;
-  color: #ffffff;
-  border: none;
   padding: 0 30px;
-  font-weight: 600;
-  font-size: 16px;
   transition: background-color 0.3s;
   border-radius: 8px !important;
   height: 55px;
@@ -2012,7 +2001,6 @@ input[name="attraction-tab"] {
 }
 
 .subscribe-form-group {
-  display: flex;
   gap: 10px;
 }
 
@@ -2057,17 +2045,15 @@ input[name="attraction-tab"] {
   color: #212121;
   font-weight: 500;
 }
+
 .footer-top {
-    flex-direction: column;
-    height: auto;
-    gap: 18px;
-    padding-bottom: 20px;
-  }
+  gap: 18px;
+  padding-bottom: 20px;
+}
 
 .footer-top a :hover {
     color: #F0034E;
-  }
-
+}
 
 details[open] summary::after {
     content: '-';
