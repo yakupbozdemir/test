@@ -999,7 +999,6 @@ input[type="radio"] {
   transition: transform 0.5s ease;
 }
 
-/* slide positions */
 #itp-tb1:checked~.tab-buttons.slides {
   transform: translateX(0px);
 }
@@ -1032,7 +1031,6 @@ input[type="radio"] {
   transform: translateX(-1776px);
 }
 
-/* nav arrows */
 .tab-buttons-container>.nav-btn {
   position: absolute;
   top: 15%;
@@ -1151,9 +1149,7 @@ input[name="attraction-tab"] {
 }
 
 .attraction-list {
-  list-style: none;
   padding-left: 1.2rem;
-  margin: 0;
 }
 
 .attraction-list li {
@@ -1180,11 +1176,6 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ======================
-   MUSEUMS SLIDER
-   (Tab: Museums)
-   ====================== */
-
 #content-museums .museum-slider-wrapper {
   position: relative;
   overflow: hidden;
@@ -1199,7 +1190,6 @@ input[name="attraction-tab"] {
 #content-museums .museum-slides {
   display: flex;
   width: 100%;
-  /* 5 positions */
   transition: transform 0.5s ease;
 }
 
@@ -1209,7 +1199,6 @@ input[name="attraction-tab"] {
   padding: 0 10px;
 }
 
-/* Slide positions */
 #content-museums #m-r1:checked~.museum-slides {
   transform: translateX(0%);
 }
@@ -1230,7 +1219,6 @@ input[name="attraction-tab"] {
   transform: translateX(-100%);
 }
 
-/* Nav buttons */
 .museum-slider-wrapper>.nav-btn {
   position: absolute;
   top: 30%;
@@ -1259,7 +1247,6 @@ input[name="attraction-tab"] {
   background-image: url('img/arrow-right-big.svg');
 }
 
-/* Show prev/next appropriately */
 .museum-slider-wrapper #m-r2:checked~.nav-prev[for="m-r1"],
 .museum-slider-wrapper #m-r3:checked~.nav-prev[for="m-r2"],
 .museum-slider-wrapper #m-r4:checked~.nav-prev[for="m-r3"],
@@ -1276,10 +1263,6 @@ input[name="attraction-tab"] {
   pointer-events: auto;
 }
 
-/* ===============================
-   MOSQUES GRID
-   (Tab: Mosques)
-   =============================== */
 #content-mosques {
   display: none;
 }
@@ -1326,16 +1309,10 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ======================
-   LANDMARKS SLIDER (Tab: Landmarks)
-   ====================== */
-
-/* Hide slider by default */
 #content-landmarks .landmarks-slider-wrapper {
   display: none;
 }
 
-/* Show slider only when Landmarks tab is active */
 #tab-landmarks:checked~.tab-content #content-landmarks .landmarks-slider-wrapper {
   display: block;
   position: relative;
@@ -1344,26 +1321,22 @@ input[name="attraction-tab"] {
   margin-top: 2rem;
 }
 
-/* Hide the radio inputs */
 #tab-landmarks:checked~.tab-content #content-landmarks .landmarks-slider-wrapper input[type="radio"] {
   display: none;
 }
 
-/* Slides container: flex */
 #tab-landmarks:checked~.tab-content #content-landmarks .landmark-slides {
   display: flex;
   width: 100%;
   transition: transform 0.5s ease;
 }
 
-/* Each slide = 25% of wrapper */
 #tab-landmarks:checked~.tab-content #content-landmarks .landmark-list {
   flex: 0 0 25%;
   box-sizing: border-box;
   padding: 0 10px;
 }
 
-/* Slide positions */
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r1:checked~.landmark-slides {
   transform: translateX(0%);
 }
@@ -1384,7 +1357,6 @@ input[name="attraction-tab"] {
   transform: translateX(-100%);
 }
 
-/* Nav button common style */
 #tab-landmarks:checked~.tab-content #content-landmarks>.nav-btn {
   position: absolute;
   top: 30%;
@@ -1399,19 +1371,16 @@ input[name="attraction-tab"] {
   pointer-events: none;
 }
 
-/* Prev arrow */
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-prev {
   left: 0;
   background-image: url('img/arrow-left-big.svg');
 }
 
-/* Next arrow */
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-next {
   right: 0;
   background-image: url('img/arrow-right-big.svg');
 }
 
-/* Show prev only on slides 2–5 */
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-prev[for="l-r1"],
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r3:checked~.nav-prev[for="l-r2"],
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r4:checked~.nav-prev[for="l-r3"],
@@ -1420,7 +1389,6 @@ input[name="attraction-tab"] {
   pointer-events: auto;
 }
 
-/* Show next only on slides 1–4 */
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r1:checked~.nav-next[for="l-r2"],
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-next[for="l-r3"],
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r3:checked~.nav-next[for="l-r4"],
@@ -1429,16 +1397,10 @@ input[name="attraction-tab"] {
   pointer-events: auto;
 }
 
-/* =========================
-   TOWERS GRID (Tab: Towers)
-   ========================= */
-
-/* Hide by default */
 #content-towers {
   display: none;
 }
 
-/* Show as 4-column grid when Towers tab is active */
 #tab-towers:checked~.tab-content #content-towers {
   display: flex;
   flex-wrap: wrap;
@@ -1447,13 +1409,11 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* Each tower-list = 25% minus gap */
 #tab-towers:checked~.tab-content #content-towers .tower-list {
   flex: 1 1 calc(25% - 2rem);
   box-sizing: border-box;
 }
 
-/* Reuse common list styling */
 #tab-towers:checked~.tab-content #content-towers .attraction-list {
   list-style: none;
   padding-left: 1.2rem;
@@ -1484,17 +1444,10 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ===========================
-   AIRPORT TRANSFERS GRID
-   (Tab: Airport)
-   =========================== */
-
-/* Hide by default */
 #content-airport {
   display: none;
 }
 
-/* Show as 4-column grid when Airport tab is active */
 #tab-airport:checked~.tab-content #content-airport {
   display: flex;
   flex-wrap: wrap;
@@ -1503,13 +1456,11 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* Each airport-list column = 25% minus gap */
 #tab-airport:checked~.tab-content #content-airport .airport-list {
   flex: 1 1 calc(25% - 2rem);
   box-sizing: border-box;
 }
 
-/* Reuse common list styling */
 #tab-airport:checked~.tab-content #content-airport .attraction-list {
   list-style: none;
   padding-left: 1.2rem;
@@ -1540,16 +1491,10 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ==============================
-   SIGHTSEEING GRID (Tab: Sightseeing)
-   ============================== */
-
-/* Hide by default */
 #content-sightseeing {
   display: none;
 }
 
-/* Show as 4-column grid when Sightseeing tab is active */
 #tab-sightseeing:checked~.tab-content #content-sightseeing {
   display: flex;
   flex-wrap: wrap;
@@ -1558,13 +1503,11 @@ input[name="attraction-tab"] {
   box-sizing: border-box;
 }
 
-/* Each column = 25% minus the gap */
 #tab-sightseeing:checked~.tab-content #content-sightseeing .sightseeing-list {
   flex: 1 1 calc(25% - 2rem);
   box-sizing: border-box;
 }
 
-/* Reuse common list styling */
 #tab-sightseeing:checked~.tab-content #content-sightseeing .attraction-list {
   list-style: none;
   padding-left: 1.2rem;
@@ -1595,7 +1538,6 @@ input[name="attraction-tab"] {
   color: #F0034E;
 }
 
-/* ---- Special Offers slider wrapper ---- */
 .special-slider-wrapper {
   position: relative;
   width: 100%;
@@ -1603,25 +1545,21 @@ input[name="attraction-tab"] {
   padding: 20px 0;
 }
 
-/* ---- Hide native radio controls ---- */
 .special-slider-wrapper input[type="radio"] {
   display: none;
 }
 
-/* ---- Slides container ---- */
 .special-slides {
   display: flex;
   transition: transform 0.4s ease;
 }
 
-/* ---- Each slide ---- */
 .special-list {
   min-width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
 }
 
-/* ---- Shift slides when radio checked ---- */
 #s-r1:checked~.special-slides {
   transform: translateX(0%);
 }
@@ -1702,9 +1640,6 @@ input[name="attraction-tab"] {
   pointer-events: none;
 }
 
-/* ================================
-   SPECIAL OFFERS (Özel Teklifler) TAB
-   ================================ */
 #content-special {
   display: none;
   margin-top: 2rem;
@@ -1786,7 +1721,6 @@ input[name="attraction-tab"] {
   color: #f0034e;
 }
 
-/* nav butonlar */
 #content-special>.nav-btn {
   position: absolute;
   top: 50%;
@@ -1813,7 +1747,6 @@ input[name="attraction-tab"] {
   background: url("img/arrow-right-big.svg") no-repeat center;
 }
 
-/* hangi butonlar gözüksün/gizlensin */
 #content-special #s-r1:checked~.nav-prev[for="s-r1"],
 #content-special #s-r2:checked~.nav-prev[for="s-r2"],
 #content-special #s-r3:checked~.nav-prev[for="s-r3"],
@@ -1844,9 +1777,6 @@ input[name="attraction-tab"] {
   pointer-events: none;
 }
 
-/* ===========================
-   SHOWS GRID (Tab: Shows)
-   =========================== */
 #content-shows {
   display: none;
 }
