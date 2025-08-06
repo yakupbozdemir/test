@@ -795,11 +795,11 @@ input[type="radio"] {
   transition: background 0.3s;
 }
 
-.review-tabs-wrapper input#tab-videos:checked~.btn-actions .btn-watch-all {
+.review-tabs-wrapper input#tab-videos:checked~.btn-actions .btn-custom {
   display: inline-block;
 }
 
-.review-tabs-wrapper input#tab-text-reviews:checked~.btn-actions .btn-read-all {
+.review-tabs-wrapper input#tab-text-reviews:checked~.btn-actions .btn-custom {
   display: inline-block;
 }
 
