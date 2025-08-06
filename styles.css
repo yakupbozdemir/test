@@ -117,7 +117,7 @@ body {
 }
 
 .itp-hero {
-  width: 100vw;
+  width: 100vw; 
   position: relative;
   left: 50%;
   right: 50%;
@@ -2119,7 +2119,6 @@ details[open] summary::after {
 @media screen and (max-width: 768px) {
   .payment-icons img {
     height: 70px;
-
   }
 
   .footer-bottom {
@@ -2178,12 +2177,6 @@ details[open] summary::after {
   margin: 10px 0 20px 0;
 }
 
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .footer-col ul li {
   margin-bottom: 12px;
 }
@@ -2202,14 +2195,6 @@ details[open] summary::after {
 
 .btn-manage-pass {
   background-color: #F0034E;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
 }
 
 .btn-manage-pass:hover {
