@@ -529,7 +529,7 @@ input[type="radio"] {
 }
 
 .review-tabs {
-    gap: 30px;
+  gap: 30px;
 }
 
 .review-tab-btn {
@@ -599,28 +599,9 @@ input[type="radio"] {
   height: 245px;
 }
 
-.video-thumbnail img {
-  width: 100%;
-  display: block;
-}
-
-.video-thumbnail a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.video-play-btn {
   width: 70px;
   height: 70px;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
 }
 
 .caption {
