@@ -107,110 +107,22 @@ body {
   color: #F0034E;
 }
 
-.itp-banner-bar {
+.hero-img {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-.itp-hero {
-  width: 100vw; 
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.hero-left .highlight {
-  color: #dc2626;
-  font-weight: 700;
-}
-
-.hero-btn {
-  display: inline-block;
-  width: 202px;
-  height: 41px;
-  background-color: #f0034e;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: #be123c;
-}
-
-.diamond {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  transform: rotate(45deg);
-  box-shadow: 0 0 0 10px #FFFFFF;
-  z-index: 2;
-}
-
-.d1 {
-  background-color: #F47B20;
-  top: 30px;
-  right: 830px;
-}
-
-.d2 {
-  background-color: #F0034E;
-  top: 148.5px;
-  right: 711px;
-}
-
-.d3 {
-  background-color: #3EB0DE;
-  top: 268px;
-  right: 830px;
-}
-
-.diamond-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.diamond span {
+.hero-img picture,
+.hero-img img {
   display: block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  line-height: 1.1;
-  margin: 0;
-  padding: 0;
-}
-
-.diamond .line1 {
-  font-size: 24px;
-}
-
-.diamond .line2 {
-  font-size: 55px;
-}
-
-.diamond .line3 {
-  font-size: 15px;
+  width: 100%;
+  height: auto;
 }
 
 .itp-slider {
@@ -228,6 +140,7 @@ input[type="radio"] {
 
 .card-slider .slides {
   transition: transform 0.5s cubic-bezier(.77, 0, .18, 1);
+  background-color: #FFFFFF;
 }
 
 .card-slider.slides>.card {
@@ -391,12 +304,6 @@ input[type="radio"] {
   width: 504px;
   height: 490px;
   object-fit: contain;
-}
-
-.itp-slider-section {
-  height: 911px;
-  padding: 0px 28.8px 50px 28.8px;
-  box-sizing: border-box;
 }
 
 .itp-download-steps {
@@ -2172,7 +2079,7 @@ details[open] summary::after {
 .footer-title-divider {
   display: block;
   width: 20px;
-  height: 1px;
+  height: 1px !important;
   background-color: #93501D;
   margin: 10px 0 20px 0;
 }
