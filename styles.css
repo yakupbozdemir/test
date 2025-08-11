@@ -1928,7 +1928,6 @@ input[name="attraction-tab"] {
 
 .site-footer {
   font-family: 'Poppins', sans-serif;
-  padding-top: 70px;
 }
 
 .site-footer p {
@@ -1971,8 +1970,6 @@ input[name="attraction-tab"] {
 }
 
 .footer-top {
-  padding: 45px;
-  
   align-items: center;
   padding-bottom: 20px;
 }
