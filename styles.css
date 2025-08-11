@@ -45,7 +45,6 @@ body {
   position: relative;
 }
 
-
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: "";
@@ -182,7 +181,6 @@ input[type="radio"] {
   font-weight: 500;
   color: #f0034e;
 }
-
 
 #itp-s1:checked~.card-slider.slides {
   transform: translateX(0);
@@ -2362,8 +2360,6 @@ details[open] summary::after {
     max-width: 220px;
     max-height: 140px;
   }
-
-
 
   .footer-col {
     width: 100% !important;
