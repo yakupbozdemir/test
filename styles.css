@@ -135,10 +135,9 @@ body {
 
 .hero-img img {
   display: block;
-  width: 100%;   
+  width: 100%;
   height: auto;
   max-height: 636.66px;
-
 }
 
 .itp-slider {
@@ -2193,12 +2192,6 @@ details[open] summary::after {
     font-size: 22px;
   }
 
-  .hero-img {
-    width: 580px;
-    height: 350px;
-    margin-left: 60px;
-  }
-
   .diamond {
     width: 95px;
     height: 95px;
@@ -2300,12 +2293,6 @@ details[open] summary::after {
     min-width: 0;
     padding-left: 0;
     height: auto;
-  }
-
-  .hero-img {
-    width: 90vw;
-    height: 200px;
-    margin-left: 0;
   }
 
   .diamond {
