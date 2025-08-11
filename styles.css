@@ -143,7 +143,7 @@ input[type="radio"] {
 }
 
 .slider-outer {
-  width: calc(244px * 5 + 28px * 4);
+  width: calc(244px * 5 + 28px * 4) !important;
 }
 
 .card-slider .slides {
@@ -196,23 +196,23 @@ input[type="radio"] {
 }
 
 #itp-s2:checked~.card-slider.slides {
-  transform: translateX(-270px);
+  transform: translateX(-265px);
 }
 
 #itp-s3:checked~.card-slider.slides {
-  transform: translateX(-544px);
+  transform: translateX(-535px);
 }
 
 #itp-s4:checked~.card-slider.slides {
-  transform: translateX(-816px);
+  transform: translateX(-805px);
 }
 
 #itp-s5:checked~.card-slider.slides {
-  transform: translateX(-1088px);
+  transform: translateX(-1072px);
 }
 
 #itp-s6:checked~.card-slider.slides {
-  transform: translateX(-1360px);
+  transform: translateX(-1340px);
 }
 
 .slider-outer>.nav-btn {
@@ -2032,7 +2032,7 @@ details[open] summary::after {
   height: 70px;
 }
 
-@media screen and (max-width: 922px) {
+@media screen and (max-width: 768px) {
   .payment-icons img {
     height: 70px;
   }
@@ -2407,7 +2407,7 @@ details[open] summary::after {
   }
 }
 
-@media (max-width: 922px) {
+@media (max-width: 768px) {
   .itp-help-body {
     flex-direction: column;
     padding: 0 16px;
