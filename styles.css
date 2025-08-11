@@ -1963,7 +1963,9 @@ input[name="attraction-tab"] {
 }
 
 .footer-top {
-  gap: 18px;
+  padding: 45px;
+  
+  align-items: center;
   padding-bottom: 20px;
 }
 
