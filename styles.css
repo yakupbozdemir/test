@@ -106,6 +106,15 @@ body {
   color: #F0034E;
 }
 
+.itp-banner-bar{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw
+}
+
 .hero-img {
   position: relative;
   left: 50%;
