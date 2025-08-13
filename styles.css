@@ -226,14 +226,14 @@ input[type="radio"] {
   width: 50px;
   height: 50px;
   left: 0px;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .slider-outer>.nav-next {
   width: 50px;
   height: 50px;
   right: 0px;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #itp-s1:checked~.nav-next[for="itp-s2"],
@@ -632,14 +632,14 @@ input[type="radio"] {
   width: 50px;
   height: 50px;
   left: 0px;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .itp-review-section .nav-next {
   width: 50px;
   height: 50px;
   right: 18px;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #itp-r1:checked~.nav-next[for="itp-r2"],
@@ -954,14 +954,14 @@ input[type="radio"] {
 .attraction-tabs .nav-prev {
   width: 30px;
   height: 30px;
-  background-image: url('img/arrow-left-black.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-black.svg');
   left: 0;
 }
 
 .attraction-tabs .nav-next {
   width: 30px;
   height: 30px;
-  background-image: url('img/arrow-right-black.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-black.svg');
   right: 0;
 }
 
@@ -1144,14 +1144,14 @@ input[name="attraction-tab"] {
   width: 50px;
   height: 50px;
   left: 0;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .museum-slider-wrapper>.nav-next {
   width: 50px;
   height: 50px;
   right: 0;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 .museum-slider-wrapper #m-r2:checked~.nav-prev[for="m-r1"],
@@ -1280,12 +1280,12 @@ input[name="attraction-tab"] {
 
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-prev {
   left: 0;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-next {
   right: 0;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-prev[for="l-r1"],
@@ -1509,12 +1509,12 @@ input[name="attraction-tab"] {
 
 .nav-prev {
   left: 10px;
-  background: url("img/arrow-left-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-left-big.svg") no-repeat center;
 }
 
 .nav-next {
   right: 10px;
-  background: url("img/arrow-right-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-right-big.svg") no-repeat center;
 }
 
 #s-r1:checked~.nav-prev[for="s-r1"],
@@ -1646,12 +1646,12 @@ input[name="attraction-tab"] {
 
 #content-special .nav-prev {
   left: 10px;
-  background: url("img/arrow-left-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-left-big.svg") no-repeat center;
 }
 
 #content-special .nav-next {
   right: 10px;
-  background: url("img/arrow-right-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-right-big.svg") no-repeat center;
 }
 
 #content-special #s-r1:checked~.nav-prev[for="s-r1"],
