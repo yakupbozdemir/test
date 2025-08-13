@@ -2351,7 +2351,6 @@ details[open] summary::after {
 }
 
 @media (max-width: 768px) {
-
   .hero-img picture {
     width: 100%;
     max-width: 768px;
@@ -2376,9 +2375,56 @@ details[open] summary::after {
     padding-left: 16px;
   }
 
+  .review-header {
+    padding-bottom: 30px;
+  }
+
+  .itp-help-section .row.g-4 {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 4px 16px;
+  }
+
+  .benefits-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .benefits-slider>[class*="col-"] {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+
+  .benefits-slider .bg-white.border-0.d-flex.flex-column {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .itp-benefits-cta {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 0;
+  }
+
   .buy-save-btn {
-    width: 420px;
+    width: 300px;
     display: block;
     margin: 0 auto;
+  }
+
+  .benefits-slider .bg-white.border-0.d-flex.flex-column {
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 15px;
+    padding: 20px;
   }
 }
