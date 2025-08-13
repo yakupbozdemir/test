@@ -2375,4 +2375,10 @@ details[open] summary::after {
   .itp-help-header {
     padding-left: 16px;
   }
+
+  .buy-save-btn {
+    width: 420px;
+    display: block;
+    margin: 0 auto;
+  }
 }
