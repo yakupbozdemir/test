@@ -226,14 +226,14 @@ input[type="radio"] {
   width: 50px;
   height: 50px;
   left: 0px;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .slider-outer>.nav-next {
   width: 50px;
   height: 50px;
   right: 0px;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #itp-s1:checked~.nav-next[for="itp-s2"],
@@ -306,6 +306,13 @@ input[type="radio"] {
   object-fit: contain;
 }
 
+
+.itp-download-section {
+  height: 674px;
+  background: #fff;
+}
+
+/* Mavi arka planlı bant */
 .itp-download-steps {
   width: 100vw;
   position: relative;
@@ -316,50 +323,133 @@ input[type="radio"] {
   height: 280px;
   background-color: #3EB0DE;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itp-download-steps>.container {
   max-width: 1440px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
 }
 
 .steps-content {
-  flex: 0 1 720px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  flex: 1 1 720px;
 }
 
 .step-item {
+  color: #fff;
+  text-align: left;
   flex: 1 1 200px;
   min-width: 200px;
   max-width: 280px;
-  height: 180px
+  height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 .step-circle {
   width: 60px;
   height: 60px;
-  font-size: 12px;
   color: #3EB0DE;
+  background: #fff;
   border-radius: 5px;
-  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.8;
+  margin-bottom: 12px;
 }
 
+.step-circle .step-label {
+  font-size: 14px;
+  line-height: 0.6;
+}
+
+.step-circle .step-number {
+  font-size: 34px;
+  line-height: 0.6;
+}
+
+/* Başlık ve metin: masaüstü */
 .step-title {
+  font-weight: 600;
   font-size: 16px;
+  color: #fff;
 }
 
 .step-text {
   font-size: 14px;
   line-height: 1.4;
+  margin: 0;
+  /* varsayılan p marginlerini sıfırla */
+  color: #fff;
 }
 
+/* Sağdaki görsel */
 .steps-image {
   flex: 0 1 450px;
   min-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.steps-image img {
+  max-width: 450px;
+  max-height: 370px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Footer alanı */
 .itp-download-footer {
   max-width: 1440px;
   height: 177px;
+  margin: 16px auto 0;
+  padding: 0 12px;
+}
+
+.itp-download-footer .footer-heading {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+  margin: 0 0 8px 0;
+}
+
+.itp-download-footer .footer-text {
+  font-size: 14px;
+  color: #4f4f4f;
+  margin: 0 0 12px 0;
+}
+
+.itp-download-footer .app-buttons img {
+  height: 45px;
+}
+
+.itp-download-footer .see-details-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #F0034E;
+  text-decoration: none;
+}
+
+.itp-download-footer .see-details-link:hover {
+  text-decoration: underline;
 }
 
 .footer-heading {
@@ -632,14 +722,14 @@ input[type="radio"] {
   width: 50px;
   height: 50px;
   left: 0px;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .itp-review-section .nav-next {
   width: 50px;
   height: 50px;
   right: 18px;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #itp-r1:checked~.nav-next[for="itp-r2"],
@@ -954,14 +1044,14 @@ input[type="radio"] {
 .attraction-tabs .nav-prev {
   width: 30px;
   height: 30px;
-  background-image: url('img/arrow-left-black.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-black.svg');
   left: 0;
 }
 
 .attraction-tabs .nav-next {
   width: 30px;
   height: 30px;
-  background-image: url('img/arrow-right-black.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-black.svg');
   right: 0;
 }
 
@@ -1144,14 +1234,14 @@ input[name="attraction-tab"] {
   width: 50px;
   height: 50px;
   left: 0;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 .museum-slider-wrapper>.nav-next {
   width: 50px;
   height: 50px;
   right: 0;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 .museum-slider-wrapper #m-r2:checked~.nav-prev[for="m-r1"],
@@ -1280,12 +1370,12 @@ input[name="attraction-tab"] {
 
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-prev {
   left: 0;
-  background-image: url('img/arrow-left-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-left-big.svg');
 }
 
 #tab-landmarks:checked~.tab-content #content-landmarks .nav-next {
   right: 0;
-  background-image: url('img/arrow-right-big.svg');
+  background-image: url('https://static.istanbultouristpass.com/images/arrow-right-big.svg');
 }
 
 #tab-landmarks:checked~.tab-content #content-landmarks #l-r2:checked~.nav-prev[for="l-r1"],
@@ -1509,12 +1599,12 @@ input[name="attraction-tab"] {
 
 .nav-prev {
   left: 10px;
-  background: url("img/arrow-left-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-left-big.svg") no-repeat center;
 }
 
 .nav-next {
   right: 10px;
-  background: url("img/arrow-right-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-right-big.svg") no-repeat center;
 }
 
 #s-r1:checked~.nav-prev[for="s-r1"],
@@ -1646,12 +1736,12 @@ input[name="attraction-tab"] {
 
 #content-special .nav-prev {
   left: 10px;
-  background: url("img/arrow-left-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-left-big.svg") no-repeat center;
 }
 
 #content-special .nav-next {
   right: 10px;
-  background: url("img/arrow-right-big.svg") no-repeat center;
+  background: url("https://static.istanbultouristpass.com/images/arrow-right-big.svg") no-repeat center;
 }
 
 #content-special #s-r1:checked~.nav-prev[for="s-r1"],
@@ -2022,6 +2112,11 @@ details[open] summary::after {
   height: 70px;
 }
 
+.custom-border {
+  width: 68%;
+  margin-left: auto;
+}
+
 @media screen and (max-width: 768px) {
 
   .payment-icons img {
@@ -2030,6 +2125,10 @@ details[open] summary::after {
 
   .footer-bottom {
     align-items: center;
+  }
+
+  .custom-border {
+    width: 100%;
   }
 
 }
@@ -2161,7 +2260,6 @@ details[open] summary::after {
     width: 100%;
     height: auto;
   }
-
 
   .footer-bottom-wrapper>.container {
     max-width: 100vw;
@@ -2351,7 +2449,6 @@ details[open] summary::after {
 }
 
 @media (max-width: 768px) {
-
   .hero-img picture {
     width: 100%;
     max-width: 768px;
@@ -2376,9 +2473,166 @@ details[open] summary::after {
     padding-left: 16px;
   }
 
+  .review-header {
+    padding-bottom: 30px;
+  }
+
+  .itp-help-section .row.g-4 {
+    padding-left: 20px;
+  }
+
+  .itp-download-section {
+    height: auto !important;
+    padding-bottom: 24px;
+    overflow: visible;
+  }
+
+  .download-header {
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .download-header h2 {
+    font-size: 26px !important;
+  }
+
+  .download-header p {
+    font-size: 17px !important;
+  }
+
+  .itp-download-steps {
+    height: auto !important;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .itp-download-steps>.container {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 16px;
+  }
+
+  .steps-content {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .step-item {
+    display: grid !important;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-rows: min-content;
+    grid-column-gap: 12px;
+    grid-row-gap: 0;
+    align-items: start;
+    padding: 12px 8px;
+    max-width: 300px !important;
+    max-height: 150px !important;
+  }
+
+  .step-item .step-circle {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  .step-item .step-title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+  .step-item .step-text {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .steps-image {
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .steps-image img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .itp-download-footer {
+    height: auto !important;
+    padding: 0 16px 20px;
+  }
+
+  .app-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .benefits-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 4px 16px;
+  }
+
+  .benefits-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .benefits-slider>[class*="col-"] {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+
+  .benefits-slider .bg-white.border-0.d-flex.flex-column {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .itp-benefits-cta {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 0;
+  }
+
   .buy-save-btn {
-    width: 420px;
+    width: 300px;
     display: block;
     margin: 0 auto;
+  }
+
+  .benefits-slider .bg-white.border-0.d-flex.flex-column {
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 15px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .step-item .step-title {
+    font-size: 15px;
+  }
+
+  .step-item .step-text {
+    font-size: 13.5px;
   }
 }
