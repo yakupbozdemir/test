@@ -308,7 +308,6 @@ input[type="radio"] {
   background: #fff;
 }
 
-/* Mavi arka planlı bant */
 .itp-download-steps {
   width: 100vw;
   position: relative;
@@ -377,7 +376,6 @@ input[type="radio"] {
   line-height: 0.6;
 }
 
-/* Başlık ve metin: masaüstü */
 .step-title {
   font-weight: 600;
   font-size: 16px;
@@ -388,11 +386,9 @@ input[type="radio"] {
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
-  /* varsayılan p marginlerini sıfırla */
   color: #fff;
 }
 
-/* Sağdaki görsel */
 .steps-image {
   flex: 0 1 450px;
   min-width: 450px;
@@ -410,7 +406,6 @@ input[type="radio"] {
   display: block;
 }
 
-/* Footer alanı */
 .itp-download-footer {
   max-width: 1440px;
   height: 177px;
