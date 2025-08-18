@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-
 * {
   box-sizing: border-box;
   margin-top: 0;
@@ -116,6 +114,55 @@ body {
   width: 100vw;
   max-width: 100vw;
 }
+
+/* Hero görseli ilk boyamada stabil dursun */
+.hero-img img { display:block; width:100%; height:auto; }
+
+/* 1440x600 => 12/5 ≈ 2.4 */
+@media (min-width:1440px){
+  .hero-img img{ aspect-ratio: 12 / 5; }
+}
+
+/* 1280x563 */
+@media (min-width:1280px) and (max-width:1439.98px){
+  .hero-img img{ aspect-ratio: 1280 / 563; }
+}
+
+/* 1024 ~ 1150x549’a en yakın oran */
+@media (min-width:1024px) and (max-width:1279.98px){
+  .hero-img img{ aspect-ratio: 1150 / 549; }
+}
+
+/* 834x862 */
+@media (min-width:834px) and (max-width:1023.98px){
+  .hero-img img{ aspect-ratio: 834 / 862; }
+}
+
+/* 768x753 (default src) */
+@media (min-width:768px) and (max-width:833.98px){
+  .hero-img img{ aspect-ratio: 768 / 753; }
+}
+
+/* 600 ~ 669x730’a en yakın oran */
+@media (min-width:600px) and (max-width:767.98px){
+  .hero-img img{ aspect-ratio: 669 / 730; }
+}
+
+/* 414x767 */
+@media (min-width:414px) and (max-width:599.98px){
+  .hero-img img{ aspect-ratio: 414 / 767; }
+}
+
+/* 375x741 */
+@media (min-width:375px) and (max-width:413.98px){
+  .hero-img img{ aspect-ratio: 375 / 741; }
+}
+
+/* 320x660 (en küçük) */
+@media (max-width:374.98px){
+  .hero-img img{ aspect-ratio: 320 / 660; }
+}
+
 
 .hero-img picture {
   width: 100%;

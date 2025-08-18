@@ -3,13 +3,54 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="language" content="en" />
     <title>Istanbul Tourist Pass® | Istanbul's One &amp; Only Digital Sightseeing Pass</title>
     <meta name="description"
         content="Skip-the-Line Instant Access to 100+ Attractions including Guided Tours, Dinner Cruise, Airport Transfers and more...Save over 50% and enjoy!">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bağlantıları erken kur: az ve öz -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Diğer origin’ler için sadece DNS -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//static.istanbultouristpass.com">
+    <link rel="dns-prefetch" href="//images.istanbultouristpass.com">
+    <link rel="dns-prefetch" href="//flagcdn.com">
+
+    <!-- LCP kahraman görselini doğru boyutta preload et -->
+    <link rel="preload" as="image" type="image/webp" href="img/768.webp" imagesrcset="
+          img/320.webp 320w,
+          img/375.webp 375w,
+          img/414.webp 414w,
+          img/600.webp 600w,
+          img/768.webp 768w,
+          img/834.webp 834w,
+          img/1024.webp 1024w,
+          img/1280.webp 1280w,
+          img/1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
+
+    <!-- Google Fonts: bloklamadan yükle -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap">
+    </noscript>
+
+    <!-- Bootstrap CSS (render-blocking kalabilir; layout stabilitesi için iyi) -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Proje CSS: non‑blocking -->
+    <link rel="preload" as="style" href="styles.css">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
+
     <link rel="shortcut icon" type="image/png"
         href="https://static.istanbultouristpass.com/images/itp/favicon.png?v5.4.5">
 </head>
@@ -26,7 +67,7 @@
 
                     <a href="#" class="navbar-brand m-0">
                         <img src="https://static.istanbultouristpass.com/images/itp-logo.svg?v5.4.5"
-                            alt="Istanbul Tourist Pass Logo" height="36">
+                            alt="Istanbul Tourist Pass Logo" loading="lazy" height="36">
                     </a>
 
                     <div class="d-flex align-items-center gap-2">
@@ -47,7 +88,7 @@
                     <div class="d-flex flex-column align-items-center pt-3">
                         <a href="#" class="navbar-brand mb-1">
                             <img src="https://static.istanbultouristpass.com/images/itp-logo.svg?v5.4.5"
-                                style="width: 193px; height: 50px; object-fit: contain;"
+                                style="width: 193px; height: 50px; object-fit: contain;" loading="lazy"
                                 alt="Istanbul Tourist Pass Logo" />
                         </a>
                         <p class="text-decoration-none mt-1 text-center"
@@ -66,84 +107,110 @@
 
                             <div class="dropdown d-inline-block">
                                 <a class="d-flex align-items-center" href="#" data-bs-toggle="dropdown">
-                                    <img src="https://flagcdn.com/16x12/gb.png" class="me-1" alt="UK Flag"> EN
+                                    <img src="https://flagcdn.com/16x12/gb.png" class="me-1" loading="lazy"
+                                        alt="UK Flag"> EN
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ar/"><img
-                                                src="https://flagcdn.com/16x12/sa.png" class="me-2"> ARAB</a></li>
+                                                src="https://flagcdn.com/16x12/sa.png" class="me-2" loading="lazy">
+                                            ARAB</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/bg/"><img
-                                                src="https://flagcdn.com/16x12/bg.png" class="me-2"> BG</a></li>
+                                                src="https://flagcdn.com/16x12/bg.png" class="me-2" loading="lazy">
+                                            BG</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/zh-cn/"><img
-                                                src="https://flagcdn.com/16x12/cn.png" class="me-2"> CN</a></li>
+                                                src="https://flagcdn.com/16x12/cn.png" class="me-2" loading="lazy">
+                                            CN</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/de/"><img
-                                                src="https://flagcdn.com/16x12/de.png" class="me-2"> DE</a></li>
+                                                src="https://flagcdn.com/16x12/de.png" class="me-2" loading="lazy">
+                                            DE</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com"><img
-                                                src="https://flagcdn.com/16x12/gb.png" class="me-2"> EN</a></li>
+                                                src="https://flagcdn.com/16x12/gb.png" class="me-2" loading="lazy">
+                                            EN</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/es/"><img
-                                                src="https://flagcdn.com/16x12/es.png" class="me-2"> ES</a></li>
+                                                src="https://flagcdn.com/16x12/es.png" class="me-2" loading="lazy">
+                                            ES</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/fr/"><img
-                                                src="https://flagcdn.com/16x12/fr.png" class="me-2"> FR</a></li>
+                                                src="https://flagcdn.com/16x12/fr.png" class="me-2" loading="lazy">
+                                            FR</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/el/"><img
-                                                src="https://flagcdn.com/16x12/gr.png" class="me-2"> GR</a></li>
+                                                src="https://flagcdn.com/16x12/gr.png" class="me-2" loading="lazy">
+                                            GR</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/hr/"><img
-                                                src="https://flagcdn.com/16x12/hr.png" class="me-2"> HR</a></li>
+                                                src="https://flagcdn.com/16x12/hr.png" class="me-2" loading="lazy">
+                                            HR</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/hu/"><img
-                                                src="https://flagcdn.com/16x12/hu.png" class="me-2"> HU</a></li>
+                                                src="https://flagcdn.com/16x12/hu.png" class="me-2" loading="lazy">
+                                            HU</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/id/"><img
-                                                src="https://flagcdn.com/16x12/id.png" class="me-2"> ID</a></li>
+                                                src="https://flagcdn.com/16x12/id.png" class="me-2" loading="lazy">
+                                            ID</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/iw/"><img
-                                                src="https://flagcdn.com/16x12/il.png" class="me-2"> IL</a></li>
+                                                src="https://flagcdn.com/16x12/il.png" class="me-2" loading="lazy">
+                                            IL</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/hi/"><img
-                                                src="https://flagcdn.com/16x12/in.png" class="me-2"> IN</a></li>
+                                                src="https://flagcdn.com/16x12/in.png" class="me-2" loading="lazy">
+                                            IN</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/it/"><img
-                                                src="https://flagcdn.com/16x12/it.png" class="me-2"> IT</a></li>
+                                                src="https://flagcdn.com/16x12/it.png" class="me-2" loading="lazy">
+                                            IT</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/fa/"><img
-                                                src="https://flagcdn.com/16x12/ir.png" class="me-2"> IRN</a></li>
+                                                src="https://flagcdn.com/16x12/ir.png" class="me-2" loading="lazy">
+                                            IRN</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ja/"><img
-                                                src="https://flagcdn.com/16x12/jp.png" class="me-2"> JP</a></li>
+                                                src="https://flagcdn.com/16x12/jp.png" class="me-2" loading="lazy">
+                                            JP</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ko/"><img
-                                                src="https://flagcdn.com/16x12/kr.png" class="me-2"> KR</a></li>
+                                                src="https://flagcdn.com/16x12/kr.png" class="me-2" loading="lazy">
+                                            KR</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/mk/"><img
-                                                src="https://flagcdn.com/16x12/mk.png" class="me-2"> MK</a></li>
+                                                src="https://flagcdn.com/16x12/mk.png" class="me-2" loading="lazy">
+                                            MK</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ur/"><img
-                                                src="https://flagcdn.com/16x12/pk.png" class="me-2"> PK</a></li>
+                                                src="https://flagcdn.com/16x12/pk.png" class="me-2" loading="lazy">
+                                            PK</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/pl/"><img
-                                                src="https://flagcdn.com/16x12/pl.png" class="me-2"> PL</a></li>
+                                                src="https://flagcdn.com/16x12/pl.png" class="me-2" loading="lazy">
+                                            PL</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/pt/"><img
-                                                src="https://flagcdn.com/16x12/pt.png" class="me-2"> PT</a></li>
+                                                src="https://flagcdn.com/16x12/pt.png" class="me-2" loading="lazy">
+                                            PT</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ro/"><img
-                                                src="https://flagcdn.com/16x12/ro.png" class="me-2"> RO</a></li>
+                                                src="https://flagcdn.com/16x12/ro.png" class="me-2" loading="lazy">
+                                            RO</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/ru/"><img
-                                                src="https://flagcdn.com/16x12/ru.png" class="me-2"> RU</a></li>
+                                                src="https://flagcdn.com/16x12/ru.png" class="me-2" loading="lazy">
+                                            RU</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/tr/"><img
-                                                src="https://flagcdn.com/16x12/tr.png" class="me-2"> TR</a></li>
+                                                src="https://flagcdn.com/16x12/tr.png" class="me-2" loading="lazy">
+                                            TR</a></li>
                                     <li><a class="dropdown-item d-flex align-items-center"
                                             href="https://istanbultouristpass.com/zh-tw/"><img
-                                                src="https://flagcdn.com/16x12/tw.png" class="me-2"> TW</a></li>
+                                                src="https://flagcdn.com/16x12/tw.png" class="me-2" loading="lazy">
+                                            TW</a></li>
                                 </ul>
                             </div>
 
@@ -186,7 +253,7 @@
                     <button
                         class="btn border rounded w-100 d-flex justify-content-between align-items-center px-3 py-2 fw-semibold"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span><img src="https://flagcdn.com/24x18/gb.png" class="me-2"> EN</span>
+                        <span><img src="https://flagcdn.com/24x18/gb.png" loading="lazy" class="me-2"> EN</span>
                         <span class="ms-auto">▼</span>
                     </button>
                     <ul class="dropdown-menu w-100" style="max-height: 300px; overflow-y: auto;">
@@ -195,55 +262,55 @@
                         </li>
 
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/sa.png" class="me-2"> ARAB</a></li>
+                                    src="https://flagcdn.com/24x18/sa.png" class="me-2" loading="lazy"> ARAB</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/bg.png" class="me-2"> BG</a></li>
+                                    src="https://flagcdn.com/24x18/bg.png" class="me-2" loading="lazy"> BG</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/cn.png" class="me-2"> CN</a></li>
+                                    src="https://flagcdn.com/24x18/cn.png" class="me-2" loading="lazy"> CN</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/de.png" class="me-2"> DE</a></li>
+                                    src="https://flagcdn.com/24x18/de.png" class="me-2" loading="lazy"> DE</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/gb.png" class="me-2"> EN</a></li>
+                                    src="https://flagcdn.com/24x18/gb.png" class="me-2" loading="lazy"> EN</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/es.png" class="me-2"> ES</a></li>
+                                    src="https://flagcdn.com/24x18/es.png" class="me-2" loading="lazy"> ES</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/fr.png" class="me-2"> FR</a></li>
+                                    src="https://flagcdn.com/24x18/fr.png" class="me-2" loading="lazy"> FR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/gr.png" class="me-2"> GR</a></li>
+                                    src="https://flagcdn.com/24x18/gr.png" class="me-2" loading="lazy"> GR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/hr.png" class="me-2"> HR</a></li>
+                                    src="https://flagcdn.com/24x18/hr.png" class="me-2" loading="lazy"> HR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/hu.png" class="me-2"> HU</a></li>
+                                    src="https://flagcdn.com/24x18/hu.png" class="me-2" loading="lazy"> HU</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/id.png" class="me-2"> ID</a></li>
+                                    src="https://flagcdn.com/24x18/id.png" class="me-2" loading="lazy"> ID</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/il.png" class="me-2"> IL</a></li>
+                                    src="https://flagcdn.com/24x18/il.png" class="me-2" loading="lazy"> IL</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/in.png" class="me-2"> IN</a></li>
+                                    src="https://flagcdn.com/24x18/in.png" class="me-2" loading="lazy"> IN</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/ir.png" class="me-2"> IR</a></li>
+                                    src="https://flagcdn.com/24x18/ir.png" class="me-2" loading="lazy"> IR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/it.png" class="me-2"> IT</a></li>
+                                    src="https://flagcdn.com/24x18/it.png" class="me-2" loading="lazy"> IT</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/jp.png" class="me-2"> JP</a></li>
+                                    src="https://flagcdn.com/24x18/jp.png" class="me-2" loading="lazy"> JP</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/kr.png" class="me-2"> KR</a></li>
+                                    src="https://flagcdn.com/24x18/kr.png" class="me-2" loading="lazy"> KR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/mk.png" class="me-2"> MK</a></li>
+                                    src="https://flagcdn.com/24x18/mk.png" class="me-2" loading="lazy"> MK</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/pk.png" class="me-2"> PK</a></li>
+                                    src="https://flagcdn.com/24x18/pk.png" class="me-2" loading="lazy"> PK</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/pl.png" class="me-2"> PL</a></li>
+                                    src="https://flagcdn.com/24x18/pl.png" class="me-2" loading="lazy"> PL</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/pt.png" class="me-2"> PT</a></li>
+                                    src="https://flagcdn.com/24x18/pt.png" class="me-2" loading="lazy"> PT</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/ro.png" class="me-2"> RO</a></li>
+                                    src="https://flagcdn.com/24x18/ro.png" class="me-2" loading="lazy"> RO</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/ru.png" class="me-2"> RU</a></li>
+                                    src="https://flagcdn.com/24x18/ru.png" class="me-2" loading="lazy"> RU</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/tr.png" class="me-2"> TR</a></li>
+                                    src="https://flagcdn.com/24x18/tr.png" class="me-2" loading="lazy"> TR</a></li>
                         <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/24x18/tw.png" class="me-2"> TW</a></li>
+                                    src="https://flagcdn.com/24x18/tw.png" class="me-2" loading="lazy"> TW</a></li>
                     </ul>
 
                 </div>
@@ -282,23 +349,35 @@
             <p class="fw-bold text-white m-0" style="font-size: 18px; line-height: 1;">Starting from just €139</p>
         </div>
 
-        <section class="hero-img d-flex position-relative overflow-hidden justify-content-center ">
+        <section class="hero-img d-flex position-relative overflow-hidden justify-content-center">
             <a class="d-flex w-100 h-auto" href="https://istanbultouristpass.com/istanbul-pass">
                 <picture>
-                    <source media="(min-width: 1440px)" srcset="img/1440.webp">
-                    <source media="(min-width: 1280px)" srcset="img/1280.webp">
-                    <source media="(min-width: 1024px)" srcset="img/1024.webp">
-                    <source media="(min-width: 834px)" srcset="img/834.webp">
-                    <source media="(min-width: 768px)" srcset="img/768.webp">
-                    <source media="(min-width: 600px)" srcset="img/600.webp">
-                    <source media="(min-width: 414px)" srcset="img/414.webp">
-                    <source media="(min-width: 375px)" srcset="img/375.webp">
-                    <source media="(min-width: 320px)" srcset="img/320.webp">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/1440.webp">
+                    <source type="image/webp" media="(min-width: 1280px)" srcset="img/1280.webp">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/1024.webp">
+                    <source type="image/webp" media="(min-width: 834px)" srcset="img/834.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/768.webp">
+                    <source type="image/webp" media="(min-width: 600px)" srcset="img/600.webp">
+                    <source type="image/webp" media="(min-width: 414px)" srcset="img/414.webp">
+                    <source type="image/webp" media="(min-width: 375px)" srcset="img/375.webp">
+                    <source type="image/webp" media="(min-width: 320px)" srcset="img/320.webp">
 
-                    <img src="img/768.webp" class="d-flex w-100 h-auto" alt="Responsive full-width image">
+                    <!-- Intrinsic size: default src 768x753 -->
+                    <img src="img/768.webp" srcset="
+          img/320.webp 320w,
+          img/375.webp 375w,
+          img/414.webp 414w,
+          img/600.webp 600w,
+          img/768.webp 768w,
+          img/834.webp 834w,
+          img/1024.webp 1024w,
+          img/1280.webp 1280w,
+          img/1440.webp 1440w" sizes="100vw" class="d-flex w-100 h-auto" alt="Responsive full-width image" width="768"
+                        height="753" loading="eager" fetchpriority="high" />
                 </picture>
             </a>
         </section>
+
 
         <section class="itp-benefits-section bg-white"
             style="padding-top: 40px; padding-bottom: 40px; padding-right: 28.8px;">
@@ -315,8 +394,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/museum.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/museum.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Instant Access to 100+ Attractions</h4>
                             <p class="itp-benefits__card-text m-0">Visit top museums, attractions, tours, cruises, and
                                 more with your
@@ -327,8 +406,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/ticket.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/ticket.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Skip Ticket Lines & Save Time</h4>
                             <p class="itp-benefits__card-text m-0">Skip lines at select attractions and save time with
                                 e-tickets.</p>
@@ -338,8 +417,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/her.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/her.svg?v5.4.5" loading="lazy"
+                                alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Turkish Hospitality at Its Best</h4>
                             <p class="itp-benefits__card-text m-0">Feel secure and guided with an Istanbul Expert's help
                                 and support.</p>
@@ -349,8 +428,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/save-money.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/save-money.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Save Money... Guaranteed!</h4>
                             <p class="itp-benefits__card-text m-0">Save over 50% with expertly optimized credit points
                                 and enjoy more of
@@ -361,8 +440,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/manage.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/manage.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Manage Your Trip via App</h4>
                             <p class="itp-benefits__card-text m-0">Plan and manage your trip with our easy-to-use
                                 multilingual app.</p>
@@ -372,8 +451,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/planet.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/planet.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Help Save our Planet</h4>
                             <p class="itp-benefits__card-text m-0">No print! Eco-friendly Show&amp;Go® instant ticketing
                                 technology.</p>
@@ -383,8 +462,8 @@
                     <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                         <div class="bg-white border-0 d-flex flex-column align-items-start text-right"
                             style="width: 230px; height: 231px;">
-                            <img src="https://static.istanbultouristpass.com/images/icons/guard.svg?v5.4.5" alt=""
-                                class="itp-benefits__icon mb-3">
+                            <img src="https://static.istanbultouristpass.com/images/icons/guard.svg?v5.4.5"
+                                loading="lazy" alt="" class="itp-benefits__icon mb-3">
                             <h4 class="itp-benefits__card-title">Flexible & Reliable Travel</h4>
                             <p class="itp-benefits__card-text m-0">Valid for one year from the purchase date. Cancel
                                 anytime!</p>
@@ -401,7 +480,7 @@
 
                 <div class="itp-benefits__app d-none d-lg-block ms-4 flex-shrink-0">
                     <img src="https://images.istanbultouristpass.com/unsafe/432x490/https://static.istanbultouristpass.com/images/triple-image.webp?v5.4.5"
-                        alt="App Image" class="img-fluid itp-benefits__app-img">
+                        loading="lazy" alt="App Image" class="img-fluid itp-benefits__app-img">
                 </div>
             </div>
 
@@ -440,7 +519,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/2.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/hagia-sophia-skip-the-ticket-line-entry-with-audio-guide265513.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" />
                         </div>
@@ -466,7 +545,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/175.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/galata-tower-skip-the-ticket-line-entry-with-audio-guide919224.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" />
                         </div>
@@ -492,7 +571,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/4.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/topkapi-palace-museum-guided-tour-with-harem-including-entry-tickets399922.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" />
                         </div>
@@ -518,7 +597,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/5.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/basilica-cistern-skip-the-ticket-line-entry-with-audio-guide1835.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" class="hover-img" />
                         </div>
@@ -544,7 +623,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/6.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/dolmabahce-palace-museum-skip-the-ticket-line-entry-with-audio-guide167386.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" />
                         </div>
@@ -594,7 +673,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/265.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/yildiz-palace-skip-the-ticket-line-entry-with-audio-guide154565.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                             <img src="https://static.istanbultouristpass.com/images/new-version-badge.webp?v5.4.5"
                                 loading="lazy" alt="Top Free Badge" />
                         </div>
@@ -642,7 +721,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/231.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/le-vapeur-magique-morning-turkish-breakfast-cruise564082.png?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
                             style="padding: 12px 0;">
@@ -666,7 +745,7 @@
                             <video src="https://static.istanbultouristpass.com/videos/253.mp4?v5.4.5"
                                 poster="https://images.istanbultouristpass.com/unsafe/0x370/https://static.istanbultouristpass.com/app/img/inclusions/thumbnails/whirling-dervishes-show-at-abud-efendi-mansion-entry-ticket286980.jpeg?v5.4.5"
                                 class="hover-video" onmouseenter="this.play()" onmouseleave="this.pause();this.load();"
-                                muted loop preload="metadata"></video>
+                                muted loop preload="none"></video>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between flex-grow-1"
                             style="padding: 12px 0;">
@@ -771,10 +850,10 @@
                 <div class="app-buttons d-flex justify-content-start gap-3">
                     <a href="https://apps.apple.com/tr/app/istanbul-tourist-pass/id6535683117"><img
                             src="https://static.istanbultouristpass.com/images/icons/app-store.svg?v5.4.5"
-                            alt="Download on App Store" height="45"></a>
+                            loading="lazy" alt="Download on App Store" height="45"></a>
                     <a href="https://play.google.com/store/apps/details?id=com.istanbultouristpass.app&hl=en&gl=US"><img
                             src="https://static.istanbultouristpass.com/images/icons/play-store.svg?v5.4.5"
-                            alt="Get it on Google Play" height="45"></a>
+                            loading="lazy" alt="Get it on Google Play" height="45"></a>
                 </div>
                 <a href="https://istanbultouristpass.com/how-it-works"
                     class="see-details-link d-inline-block mt-3 fw-semibold text-decoration-none">See
@@ -787,7 +866,8 @@
                 <div class="review-header text-start mb-4">
                     <p class="text-muted">What our customers say?</p>
                     <h2 class="review-title">People <img
-                            src="https://static.istanbultouristpass.com/images/icons/hearth-icon.svg" alt="love icon">
+                            src="https://static.istanbultouristpass.com/images/icons/hearth-icon.svg" loading="lazy"
+                            alt="love icon">
                         Istanbul Tourist
                         Pass®</h2>
                 </div>
@@ -845,11 +925,11 @@
                                                 <a href="https://youtube.com/shorts/oXHw6qReTMk"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Ursula P. from Germany</p><img class="quote-icon"
+                                                <p>Ursula P. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -863,11 +943,11 @@
                                                 <a href="https://youtube.com/shorts/v8MqPkTMLxM"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Olina R. from Russia</p><img class="quote-icon"
+                                                <p>Olina R. from Russia</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -881,11 +961,11 @@
                                                 <a href="https://youtube.com/shorts/Ue9XyqrjOAE"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Tatjana S. from Russia</p><img class="quote-icon"
+                                                <p>Tatjana S. from Russia</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -899,11 +979,11 @@
                                                 <a href="https://youtube.com/shorts/khR1tM5AfpM"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Ivan P. from Russia</p><img class="quote-icon"
+                                                <p>Ivan P. from Russia</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -917,11 +997,11 @@
                                                 <a href="https://youtube.com/shorts/N5DnUJiNkTE"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Volodymyr K. from Germany</p><img class="quote-icon"
+                                                <p>Volodymyr K. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -935,11 +1015,11 @@
                                                 <a href="https://youtube.com/shorts/amP049lsQWo"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Elena H. from Country</p><img class="quote-icon"
+                                                <p>Elena H. from Country</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -953,11 +1033,11 @@
                                                 <a href="https://youtube.com/shorts/s8IDfPeQFFs"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Natasha P. from Russia</p><img class="quote-icon"
+                                                <p>Natasha P. from Russia</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -971,11 +1051,11 @@
                                                 <a href="https://www.youtube.com/shorts/L7mXj--87No"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Svetlana S. from Germany</p><img class="quote-icon"
+                                                <p>Svetlana S. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -989,11 +1069,11 @@
                                                 <a href="https://www.youtube.com/shorts/j8wSr8u7fT0"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Elisabeth H. from Germany</p><img class="quote-icon"
+                                                <p>Elisabeth H. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1007,11 +1087,11 @@
                                                 <a href="https://www.youtube.com/shorts/szPhVG5u6zQ"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Tatjana H. from Germany</p><img class="quote-icon"
+                                                <p>Tatjana H. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1025,11 +1105,11 @@
                                                 <a href="https://www.youtube.com/shorts/TUQpNiD7rvI"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Yulia G. from Germany</p><img class="quote-icon"
+                                                <p>Yulia G. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1043,11 +1123,11 @@
                                                 <a href="https://www.youtube.com/shorts/At8uppqd6rU"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Elena O. from Germany</p><img class="quote-icon"
+                                                <p>Elena O. from Germany</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1062,11 +1142,11 @@
                                                 <a href="https://youtube.com/shorts/7JQ-kfExIf8"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Alina from Ukraine</p><img class="quote-icon"
+                                                <p>Alina from Ukraine</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1081,12 +1161,12 @@
                                                 <a href="https://www.youtube.com/watch?v=3Xo7tTqg-wY"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
 
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Olivia S. from Britain</p><img class="quote-icon"
+                                                <p>Olivia S. from Britain</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1101,11 +1181,11 @@
                                                 <a href="https://www.youtube.com/watch?v=1qEm-7Z30N0"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Audrey from the UK</p><img class="quote-icon"
+                                                <p>Audrey from the UK</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1120,11 +1200,11 @@
                                                 <a href="https://www.youtube.com/watch?v=HocDMO_Eup4"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Ilinca M. from Romania</p><img class="quote-icon"
+                                                <p>Ilinca M. from Romania</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1139,11 +1219,11 @@
                                                 <a href="https://www.youtube.com/watch?v=ODRL3dDpP1s"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Minjun from korea</p><img class="quote-icon"
+                                                <p>Minjun from korea</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1158,12 +1238,13 @@
                                                 <a href="https://www.youtube.com/watch?v=eWmydLGhVks"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
 
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
                                                 <p>Brianne & Thomas from Ireland</p><img class="quote-icon"
+                                                    loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1178,12 +1259,12 @@
                                                 <a href="https://www.youtube.com/watch?v=2z6kM2Y5GPc"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
 
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Kiran & Priiya from India</p><img class="quote-icon"
+                                                <p>Kiran & Priiya from India</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1198,11 +1279,11 @@
                                                 <a href="https://www.youtube.com/embed/lkHrdoAnlnc"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Seong-Ho from Korea</p><img class="quote-icon"
+                                                <p>Seong-Ho from Korea</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1217,11 +1298,11 @@
                                                 <a href="https://www.youtube.com/watch?v=3n03Jbc0LMI"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Gabriel Bernard from France</p><img class="quote-icon"
+                                                <p>Gabriel Bernard from France</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1236,11 +1317,11 @@
                                                 <a href="https://youtu.be/IL73JEpVMIM"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Laura P. from France</p><img class="quote-icon"
+                                                <p>Laura P. from France</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1255,12 +1336,12 @@
                                                 <a href="https://www.youtube.com/watch?v=dQIrkfS-Grc&ab_channel=IstanbulTouristPass"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
 
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Emma C. from Australia</p><img class="quote-icon"
+                                                <p>Emma C. from Australia</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1275,12 +1356,13 @@
                                                 <a href="https://www.youtube.com/watch?v=c8jdmg1k71s&ab_channel=IstanbulTouristPass"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
 
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
                                                 <p>Vivienne Peyroux from France</p><img class="quote-icon"
+                                                    loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1295,11 +1377,11 @@
                                                 <a href="https://www.youtube.com/watch?v=yYm-LtJGKyY&ab_channel=IstanbulTouristPass"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
-                                                <p>Katherine Campbell from USA</p><img class="quote-icon"
+                                                <p>Katherine Campbell from USA</p><img class="quote-icon" loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1314,11 +1396,12 @@
                                                 <a href="https://www.youtube.com/watch?v=3mhFWOjxWWI"
                                                     class="video-play-btn position-absolute top-50 start-50 translate-middle">
                                                     <img src="https://static.istanbultouristpass.com/app/images/play-icons.webp?v5.4.5"
-                                                        alt="video-play-btn">
+                                                        loading="lazy" alt="video-play-btn">
                                                 </a>
                                             </div>
                                             <div class="caption d-flex justify-content-between align-items-center">
                                                 <p>Omar Jacobs from South Africa</p><img class="quote-icon"
+                                                    loading="lazy"
                                                     src="https://static.istanbultouristpass.com/images/icons/quote.svg"
                                                     alt="">
                                             </div>
@@ -1388,19 +1471,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1415,19 +1498,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1442,19 +1525,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1469,19 +1552,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1496,19 +1579,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1524,19 +1607,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1552,19 +1635,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1580,19 +1663,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -1607,19 +1690,19 @@
                                         class="text-review-card d-flex flex-column justify-content-between bg-white border border-secondary-subtle rounded-3 p-3">
                                         <div class="pb-3">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                             <img data-src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5"
-                                                alt="" class="review-star"
+                                                alt="" loading="lazy" class="review-star"
                                                 src="https://static.istanbultouristpass.com/images/icons/stars/y-star.webp?v5.4.5">
                                         </div>
                                         <p class="review-text flex-grow-1 text-black fw-light">
@@ -2995,11 +3078,11 @@
                                         <h4 class="fw-bold mt-4 text-dark mb-2">OUR SISTER BRANDS</h4>
                                         <span class="footer-title-divider"></span>
                                         <ul class="list-unstyled p-0 m-1 d-flex flex-column gap-2">
-                                            <li><a href="https://cappadociatravelpass.com/"><img
+                                            <li><a href="https://cappadociatravelpass.com/"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/cappadocia-pass.svg?v5.4.5"
                                                         alt="Cappadocia" height="32"></a>
                                             </li>
-                                            <li><a href="https://istanbul.com/"><img
+                                            <li><a href="https://istanbul.com/"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/istanbulcom.svg?v5.4.5"
                                                         alt="istanbul.com" height="24"></a></li>
                                         </ul>
@@ -3012,13 +3095,13 @@
                                             <h4 class="fw-bold text-dark text-uppercase mb-2">STAY CONNECTED</h4>
                                             <span class="footer-title-divider"></span>
                                             <div class="footer-social d-flex gap-3 mt-2">
-                                                <a href="#"><img
+                                                <a href="#"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/social/instagram.svg?v5.4.5"
                                                         alt="Instagram" height="20"></a>
-                                                <a href="#"><img
+                                                <a href="#"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/social/facebook.svg?v5.4.5"
                                                         alt="Facebook" height="20"></a>
-                                                <a href="#"><img
+                                                <a href="#"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/social/youtube.svg?v5.4.5"
                                                         alt="YouTube" height="20"></a>
                                             </div>
@@ -3036,10 +3119,10 @@
                                                 PASS® APP</h4>
                                             <span class="footer-title-divider"></span>
                                             <div class="d-flex gap-2 mt-2 flex-wrap align-items-center">
-                                                <a href="#"><img
+                                                <a href="#"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/app-store-gray.svg?v5.4.5"
                                                         alt="App Store" height="40"></a>
-                                                <a href="#"><img
+                                                <a href="#"><img loading="lazy"
                                                         src="https://static.istanbultouristpass.com/images/icons/play-store-gray.svg?v5.4.5"
                                                         alt="Google Play" height="40"></a>
                                             </div>
@@ -3058,7 +3141,7 @@
                                     class="btn w-100 fw-semibold text-white"
                                     style="background-color: #ed1c64; border-radius: 6px;">
                                     <img src="https://static.istanbultouristpass.com/images/icons/pass-icon.svg" alt=""
-                                        class="me-2" style="width: 18px; vertical-align: text-bottom;">
+                                        loading="lazy" class="me-2" style="width: 18px; vertical-align: text-bottom;">
                                     Manage Your Pass
                                 </a>
                             </div>
@@ -3067,10 +3150,10 @@
                                 <h6 class="text-uppercase border-bottom shadow-none px-0 py-3  fw-bold mb-3">Get
                                     Istanbul Tourist Pass® App</h6>
                                 <div class="d-flex gap-2">
-                                    <a href="#"><img
+                                    <a href="#"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/app-store-gray.svg?v5.4.5"
                                             alt="App Store" height="40"></a>
-                                    <a href="#"><img
+                                    <a href="#"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/play-store-gray.svg?v5.4.5"
                                             alt="Google Play" height="40"></a>
                                 </div>
@@ -3227,10 +3310,10 @@
                                 <h6 class="text-uppercase  fw-bold border-bottom shadow-none px-0 py-3 ">Our Sister
                                     Brands</h6>
                                 <div class="d-flex align-items-center gap-4">
-                                    <a href="https://cappadociatravelpass.com/"><img
+                                    <a href="https://cappadociatravelpass.com/"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/cappadocia-pass.svg?v5.4.5"
                                             alt="Cappadocia Travel Pass" height="32"></a>
-                                    <a href="https://istanbul.com/"><img
+                                    <a href="https://istanbul.com/"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/istanbulcom.svg?v5.4.5"
                                             alt="istanbul.com" height="24"></a>
                                 </div>
@@ -3239,13 +3322,13 @@
                             <div class="pt-4">
                                 <h6 class="text-uppercase fw-bold border-bottom shadow-none py-3 ">Stay Connected</h6>
                                 <div class="d-flex align-items-center gap-3">
-                                    <a href="#"><img
+                                    <a href="#"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/social/instagram.svg?v5.4.5"
                                             alt="Instagram" height="24"></a>
-                                    <a href="#"><img
+                                    <a href="#"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/social/facebook.svg?v5.4.5"
                                             alt="Facebook" height="24"></a>
-                                    <a href="#"><img
+                                    <a href="#"><img loading="lazy"
                                             src="https://static.istanbultouristpass.com/images/icons/social/youtube.svg?v5.4.5"
                                             alt="YouTube" height="24"></a>
                                 </div>
@@ -3264,7 +3347,8 @@
 
                                     <div
                                         class="col-lg-7 d-flex align-items-center gap-3 mb-4 mb-lg-0 text-center text-lg-start">
-                                        <img src="https://static.istanbultouristpass.com/images/expert-30-logo.webp?v5.4.5"
+                                        <img loading="lazy"
+                                            src="https://static.istanbultouristpass.com/images/expert-30-logo.webp?v5.4.5"
                                             alt="30 Years Istanbul Experts" height="90" class="flex-shrink-0">
                                         <div class="w-100">
                                             <p class="mb-1 small">
@@ -3288,10 +3372,12 @@
                                     <div class="col-lg-5  ms-auto">
                                         <div
                                             class="secure pb-3 d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
-                                            <img src="https://static.istanbultouristpass.com/images/icons/lock.svg"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/icons/lock.svg"
                                                 alt="Secure" style="height:22px">
                                             <small>Guaranteed <strong>safe&secure</strong> checkout</small>
-                                            <img src="https://static.istanbultouristpass.com/images/icons/stripe.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/icons/stripe.svg?v5.4.5"
                                                 alt="stripe" style="height:22px">
                                         </div>
 
@@ -3300,19 +3386,26 @@
 
                                         <div class="pay-logos p-3  d-flex flex-wrap justify-content-center justify-content-lg-end gap-2"
                                             style="padding-right:0 !important;">
-                                            <img src="https://static.istanbultouristpass.com/images/visa.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/visa.svg?v5.4.5"
                                                 alt="Visa" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/mastercard.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/mastercard.svg?v5.4.5"
                                                 alt="Mastercard" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/paypal.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/paypal.svg?v5.4.5"
                                                 alt="PayPal" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/amex.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/amex.svg?v5.4.5"
                                                 alt="Amex" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/jcb.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/jcb.svg?v5.4.5"
                                                 alt="JCB" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/discover.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/discover.svg?v5.4.5"
                                                 alt="Discover" height="32px">
-                                            <img src="https://static.istanbultouristpass.com/images/union-pay.svg?v5.4.5"
+                                            <img loading="lazy"
+                                                src="https://static.istanbultouristpass.com/images/union-pay.svg?v5.4.5"
                                                 alt="UnionPay" height="32px">
                                         </div>
                                     </div>
@@ -3324,7 +3417,7 @@
                 </div>
             </div>
         </footer>
-        
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
